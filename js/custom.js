@@ -194,58 +194,6 @@ jQuery(document).ready(function(){
     	theme: 'pp_default',
     	horizontal_padding: 5,
     });
-
-	/* ---------------------------------------------------------------------- */
-	/*	Contact Form
-	/* ---------------------------------------------------------------------- */
-	
-	// Needed variables
-	var $contactform 	= $('#contactform'),
-		$success		= 'Your message has been sent. Thank you!';
-		
-	$contactform.submit(function(){
-		$.ajax({
-		   type: "POST",
-		   url: "php/contact.php",
-		   data: $(this).serialize(),
-		   success: function(msg)
-		   {
-				if(msg == 'SEND'){
-					response = '<div class="success">'+ $success +'</div>';
-				}
-				else{
-					response = '<div class="error">'+ msg +'</div>';
-				}
-				// Hide any previous response text
-				$(".error,.success").remove();
-				// Show response message
-				$contactform.prepend(response);
-			}
-		 });
-		return false;
-	});	
-	/* ---------------------------------------------------------------------- */
-	/*	Google Maps
-	/* ---------------------------------------------------------------------- */
-	
-	// Needed variables
-	var $map 				= $('#map'),
-		$tabContactClass 	= ('tab-contact'),
-		$lat 				= '-37.81759',
-		$lon 				= '144.964557';
-
-	$map.gmap().bind('init', function(ev, map) {
-		$map.gmap('addMarker', {'position': $lat +','+ $lon  , 'bounds': true}).click(function() {
-			$map.gmap('openInfoWindow', {'content': 'Hello World!'}, this);
-		});
-		$map.gmap('option', 'zoom', 16);
-	});
-
-	// Refresh Map
-	$content.bind('easytabs:after', function(evt,tab,panel) {
-		$map.gmap('refresh'); 
-  	});
-
       
   
 
