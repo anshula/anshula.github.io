@@ -1,0 +1,333 @@
+/*-------------------------------------------------------*/
+/* Typography */
+/*-------------------------------------------------------*/
+ h1 {
+    font-size: 35px;
+     padding-top: 30px;
+}
+ h2 {
+    font-size: 30px;
+}
+ h3 {
+    font-size: 20px;
+     padding-top: 15px;
+}
+ h4 {
+    font-size: 15px;
+}
+ h5 {
+    font-size: 13px;
+}
+ h6 {
+    font-size: 12px;
+}
+ @font-face {
+     font-family: 'anshularegular';
+     src: url('../fonts/anshula-regular-webfont.woff2') format('woff2'), url('../fonts/anshula-regular-webfont.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+/*-------------------------------------------------------*/
+/* Base styles */
+/*-------------------------------------------------------*/
+ html {
+    /*overflow-y:scroll;
+    */
+}
+ body {
+     background-color: #E8E8E8;
+     margin: 0px;
+     padding: 0px;
+     font-family: 'anshularegular';
+}
+ #container {
+     height: 100%;
+    /* necessary for scrolling to work in firefox */
+}
+ #content {
+    /*padding-top: 10px;
+     to make the top element unstick */
+     margin-left: 300px;
+     transition: all .25s;
+    /*to make transition smooth when navbar opens/closes*/
+    /*height: 100%;
+    */
+}
+ #content.full {
+    /*padding-top: 10px;
+     to make the top element unstick */
+     margin-left: 0px;
+    /*height: 100%;
+    */
+}
+/*-------------------------------------------------------*/
+/* Generic Classes */
+/*-------------------------------------------------------*/
+ button:focus {
+     outline:0;
+    /* don't show blue border around buttons */
+}
+ .hidden {
+     display: none;
+}
+/*-------------------------------------------------------*/
+/* Side navbar */
+/*-------------------------------------------------------*/
+ #navbarcontainer {
+     width: 300px;
+    /*height: 100%;
+    */
+     position: fixed;
+     left:0;
+     top:0;
+     bottom: 0;
+     transition: all .25s;
+}
+ #navbarcontainer.collapsed {
+     left:-300px;
+    /*margin-left: -300px;
+    */
+}
+ #navbar {
+     padding: 20px;
+     display: block;
+     height: 100%;
+     background-color: #444;
+    /* position: -webkit-sticky;
+     position: sticky;
+     left: 0;
+     top: 0;
+     */
+    /*padding: 20px;
+    */
+     overflow-y:scroll;
+}
+ #navbar .title {
+     font-size: 40px;
+     text-align: center;
+     color: #fff;
+     font-weight: bold;
+     line-height: .9;
+}
+
+ #navbar .author {
+    margin-top: 10px;
+     font-size: 15px;
+     text-align: center;
+     color: #ccc;
+     font-weight: bold;
+}
+
+ #navbar a:hover .author {
+    color: #fff;
+}
+
+ #navbar .chapter .chaptitle {
+    /*the chapter title*/
+     display: block;
+     margin-top: 25px;
+     padding-bottom: 10px;
+     font-size: 20px;
+     font-weight: bold;
+}
+ #navbar a {
+     color: #eee;
+     text-decoration: none;
+}
+ #navbar a .section {
+     padding: 10px 15px 10px 15px;
+     font-size: 19px;
+     line-height: 1;
+}
+ #navbar a:hover .section,  #navbar a .section#selected{
+     background-color: #E8E8E8;
+     color: #444;
+     border-radius: 5px;
+}
+ #navbar a[disabled="disabled"] {
+     color: #aaa;
+}
+
+/*-------------------------------------------------------*/
+/* Jump to button */
+/*-------------------------------------------------------*/
+
+#navbar a#jumpto {
+    font-size: 15px;
+    background-color: #bbb;
+    padding: 8px;
+    border-radius: 10px;
+
+    display: block;
+    width: 160px;
+    margin: 0 auto;
+
+    color: #444;
+
+    text-align: center;
+
+    margin-top: 15px;
+}
+
+#navbar a#pdf {
+    font-size: 15px;
+    /*background-color: #bbb;*/
+    /*padding: 8px;*/
+    /*border-radius: 10px;*/
+
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+
+    /*color: #444;*/
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    text-decoration: underline;
+/*    position: fixed;
+    left: 5px;
+    top: 5px;*/
+}
+
+ #navbar a#jumpto:hover {
+    background-color: #E8E8E8;
+ }
+
+ #navbar a#pdf:hover {
+    text-decoration: underline;
+ }
+
+
+/*-------------------------------------------------------*/
+/* Animated navbar button */
+/*-------------------------------------------------------*/
+
+ .navbarcollapsebutton {
+    /* position: fixed;
+     left: 340px;
+     z-index: 2;
+    */
+     background-color: #444;
+     border: none;
+     color: #E8E8E8;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 25px;
+     width: 60px;
+     height: 60px;
+     z-index: 2;
+     position: fixed;
+     top: 0;
+     left: 0;
+     transition: 0.25s;
+}
+ .navbarcollapsebutton.change {
+     left: 300px;
+}
+
+ .menuicon {
+     margin: 0 auto;
+}
+ .bar1, .bar2, .bar3 {
+     text-align: center;
+     width: 25px;
+     height: 3px;
+     background-color: #E8E8E8;
+     margin: 6px auto;
+     transition: 0.7s;
+}
+/*.change .bar1 {
+     -webkit-transform: rotate(-45deg) translate(-5px, 7px);
+     transform: rotate(-30deg) translate(-5px, 1px);
+}
+ .change .bar2 {
+    opacity: 0;
+}
+ .change .bar3 {
+     -webkit-transform: rotate(45deg) translate(-5px, -7px);
+     transform: rotate(30deg) translate(-5px, -1px);
+}
+*/
+/*-------------------------------------------------------*/
+/* Comic headers and images */
+/*-------------------------------------------------------*/
+ .comic {
+    /*width: 80%;
+    */
+     width: 100%;
+     display: block;
+     margin: 0 auto;
+}
+ .comicheader {
+     /*top: 0;*/
+     margin: 30px auto;
+     color: #eee;
+     width: 60%;     
+     background-color: #555;
+
+     box-shadow: -5px 5px 10px #444;
+}
+ 
+ .comicheader p {
+    margin: 0;
+     display: block;
+     text-align: center;
+     font-size: 30px;
+     margin-left: 70px;
+     margin-right: 70px;
+
+     padding: 20px;
+
+
+}
+ .comicheader.is_stuck {
+     position: fixed;
+     margin: 0;
+     height: 60px;
+     top: 0;
+     right: 0;
+     box-shadow: -5px 5px 10px #444;
+     background-color: #555;
+}
+
+
+ .comicheader.is_stuck p {
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     margin-top: 15px;
+
+     padding: 0px;
+}
+/*-------------------------------------------------------*/
+/* Endless scroll styles */
+/*-------------------------------------------------------*/
+/*.comicpage {
+     overflow-x: hidden;
+}*/
+
+/*#images {
+    margin-top: 50px;
+}*/
+
+ #images img {
+     display: block;
+     width: 100%;
+    /*height: 500px;
+     width: 500px;
+    */
+    /*width: 580px;
+    */
+}
+
+
+
+
+
+
+
+
+ 
