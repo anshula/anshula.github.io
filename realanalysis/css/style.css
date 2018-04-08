@@ -130,6 +130,11 @@
      font-size: 20px;
      font-weight: bold;
 }
+
+ #navbar .chapter .chaptitle:last-of-type {
+    margin-bottom: 25px;
+ }
+
  #navbar a {
      color: #eee;
      text-decoration: none;
