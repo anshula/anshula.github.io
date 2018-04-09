@@ -117,7 +117,6 @@ $(document).ready(function() {
             width: new_width
         }, duration=150)
 
-        console.log("about to bind");
         // bind once!
         $("#content").one("transitionend", function(){
             // alert("finished animation");
