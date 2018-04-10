@@ -41,14 +41,14 @@ function locationHashChanged() {
     comicpage = $("div[data-comicpage='"+newPage.toString()+"']")
     // if that has already been loaded, scroll to that position
     if(comicpage.length == 1) {
-        console.log("page exists");
+        // console.log("page exists");
         scrollToComic(comicpage);
         
 
     }
     // otherwise, load the new page
     else {
-        console.log("page does not exist")
+        // console.log("page does not exist")
 
         // clear out old comics
         if($(".endless_scroll_inner_wrap").length == 0) {
@@ -92,4 +92,18 @@ function locationHashChanged() {
         scrollToComic(comicpage);
 
     }
+
+    // if on mobile and the haschange was triggered by clicking on menu bar
+    if(fromMobileNavbarClick) {
+        $(".navbarcollapsebutton").trigger("click");
+        fromMobileNavbarClick = false;
+        // alert('triggered')
+    }
+    // else {
+    //     alert('not triggered')
+    // }
+    // else {
+    //     alert("not mobile navbar")
+    // }
+
 }

@@ -3,7 +3,7 @@ var comictitles = JSON.parse(data); // from the data variable in comics.json
 var numcomics = comictitles.length;
 
 var freezeHashChanging = false;
-
+var fromMobileNavbarClick = false;
 
 function loadInitialComics(pageNumbers) {
 
@@ -89,7 +89,14 @@ $(document).ready(function() {
         $(".chapter").eq(chapter_index).append(a + (index+1) + b + comictitles[index].title + c);
 
     }
-
+    // if mobile device, make the navbar close when a link is clicked.
+        if(isMobile) {
+            // loop through each a tag in the navbar and link it to an onclick event that closes the navbar
+            $("#navbarcontainer a").click(function() {
+                // should only do it after the hashchange function
+                fromMobileNavbarClick = true;
+            })
+        }
 
     /*-------------------------------------------------------*/
     /* Make navbar button work */
