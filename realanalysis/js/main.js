@@ -42,6 +42,27 @@ $(document).ready(function() {
 
     window.onhashchange = locationHashChanged;
 
+    /*-------------------------------------------------------*/
+    /* Let navbar be populated by json */
+    /*-------------------------------------------------------*/
+    var chapter_index = -1;
+
+    for (index = 0; index < numcomics; index++) {
+        if(comictitles[index].newchapter == "true") {
+            chapter_index++;
+            $(".chapter").eq(chapter_index).find("a:first").attr("href", "#"+(index+1));
+        }
+
+        var a = "<a href='#"
+        var b = "'><div class='section'>"
+        var c = "</div></a>"
+        $(".chapter").eq(chapter_index).append(a + (index+1) + b + comictitles[index].title + c);
+
+    }
+
+    /*-------------------------------------------------------*/
+    /* Go to the correct page */
+    /*-------------------------------------------------------*/
 
     // figure out what the current url should be
     // if invalid url, make it a valid one
@@ -63,40 +84,17 @@ $(document).ready(function() {
     // should eventually be replaced with lastURL (most recent comic)
     // window.location.replace("#1");
 
-    /*-------------------------------------------------------*/
-    /* Read from comics.json file */
-    /*-------------------------------------------------------*/
-
-    
-    // Populate the current HTML with the json file
-
-    // loadInitialComics([1,2,3]);
 
     /*-------------------------------------------------------*/
-    /* Let navbar be populated by json */
+    /* if mobile device, make the navbar close when a link is clicked */
     /*-------------------------------------------------------*/
-    var chapter_index = -1;
-
-    for (index = 0; index < numcomics; index++) {
-        if(comictitles[index].newchapter == "true") {
-            chapter_index++;
-            $(".chapter").eq(chapter_index).find("a:first").attr("href", "#"+(index+1));
-        }
-
-        var a = "<a href='#"
-        var b = "'><div class='section'>"
-        var c = "</div></a>"
-        $(".chapter").eq(chapter_index).append(a + (index+1) + b + comictitles[index].title + c);
-
+    if(isMobile) {
+        // loop through each a tag in the navbar and link it to an onclick event that closes the navbar
+        $("#navbarcontainer a").click(function() {
+            // should only do it after the hashchange function
+            fromMobileNavbarClick = true;
+        })
     }
-    // if mobile device, make the navbar close when a link is clicked.
-        if(isMobile) {
-            // loop through each a tag in the navbar and link it to an onclick event that closes the navbar
-            $("#navbarcontainer a").click(function() {
-                // should only do it after the hashchange function
-                fromMobileNavbarClick = true;
-            })
-        }
 
     /*-------------------------------------------------------*/
     /* Make navbar button work */
