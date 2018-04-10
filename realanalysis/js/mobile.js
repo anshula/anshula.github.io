@@ -1,4 +1,13 @@
+var isMobile = false;
+
+
 $(function(){
+
+  if (/Mobi/.test(navigator.userAgent)) {
+    // mobile!
+    isMobile = true;
+}
+
   // Bind the swipeHandler callback function to the swipe event on div.box
   $( "body" ).on( "swipeleft", swipedLeft );
   $( "body" ).on( "swiperight", swipedRight );

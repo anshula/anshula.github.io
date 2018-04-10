@@ -55,6 +55,8 @@ $(document).ready(function() {
     else {
         // start at most recent comic
         window.location.href = "#"+numcomics
+        // force a hash change
+        locationHashChanged();
     }
 
     // trigger initial url
@@ -128,6 +130,11 @@ $(document).ready(function() {
         // but only do this once all the animation stuff is done
         
     });
+
+    if(isMobile) {
+        //hide navbar
+        $(".navbarcollapsebutton").trigger("click");
+    }
 
     /*-------------------------------------------------------*/
     /* Make endless scrolling work */
