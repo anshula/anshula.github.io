@@ -54,7 +54,7 @@ $(document).ready(function() {
     }
     else {
         // start at most recent comic
-        window.location.href = "#"+numcomics
+        window.location.href = "#"+numcomics;
         // force a hash change
         locationHashChanged();
     }
