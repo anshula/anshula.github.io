@@ -37,6 +37,14 @@ function locationHashChanged() {
     $("#selected").removeAttr("id");
     $(".chapter a[href='"+location.hash+"'] .section").attr("id", "selected");
 
+    // if bibliography section
+    if(location.hash == "#bibliography") {
+        alert("biliography section");
+        freezeHashChanging = false;
+        return;
+    }
+
+    // if regular page
     var newPage = parseInt(location.hash.substring(1));
     comicpage = $("div[data-comicpage='"+newPage.toString()+"']")
     // if that has already been loaded, scroll to that position
