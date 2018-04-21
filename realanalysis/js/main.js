@@ -46,25 +46,17 @@ $(document).ready(function() {
     /* Let navbar be populated by json */
     /*-------------------------------------------------------*/
     var chapter_index = -1;
-    var chaptitle;
 
     for (index = 0; index < numcomics; index++) {
-        if(comictitles[index].newchapter == "bibliography") {
-            $(".bibliography").find("a:first").attr("href", "#"+(index+1));
-            chaptitle = $(".bibliography")
-
-        }
-
-        else if(comictitles[index].newchapter == "true") {
+        if(comictitles[index].newchapter == "true") {
             chapter_index++;
             $(".chapter").eq(chapter_index).find("a:first").attr("href", "#"+(index+1));
-            chaptitle = $(".chapter").eq(chapter_index)
         }
-        
+
         var a = "<a href='#"
         var b = "'><div class='section'>"
         var c = "</div></a>"
-        chaptitle.append(a + (index+1) + b + comictitles[index].title + c);
+        $(".chapter").eq(chapter_index).append(a + (index+1) + b + comictitles[index].title + c);
 
     }
 

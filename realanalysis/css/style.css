@@ -131,7 +131,7 @@
      font-weight: bold;
 }
 
- #navbar .chapter .bibliography {
+ #navbar .chapter .chaptitle:last-of-type {
     margin-bottom: 25px;
  }
 
