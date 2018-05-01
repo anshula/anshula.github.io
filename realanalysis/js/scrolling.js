@@ -46,7 +46,7 @@ function setUpEndlessScroll() {
 
             var imgtagstart = "<div class='comicheader'><div><p>";
             var imgmiddle = "</p></div></div> <img src='img/";
-            var imgtagend = ".png' class='comic' />";
+            var imgtagend = ".jpg' class='comic' />";
 
             // if the user is scrolling up
             if (d == "prev") {
