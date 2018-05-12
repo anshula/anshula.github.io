@@ -1,0 +1,20 @@
+-----------
+CREATE FONT
+-----------
+Create fonts using Calligraphr (www.calligraphr.com)
+Click on "Anshula" > Build Font
+Click on "Anshula Italic" > Build Font > Rename to "Anshula" (so the fonts have the same family name, but different style names)
+
+-----------
+INSTALL ON MAC
+-----------
+Go to Font Book on Mac to remove existing Anshula font
+
+Double click on regular TTF to install regular to mac
+Double click on italic TTF to install italic font to mac
+
+-----------
+INSTALL ON WEB
+-----------
+Turn ttf into woff using Transfonter (https://transfonter.org/)
+Update css style sheet according to what Transfonter says

@@ -21,11 +21,21 @@
  h6 {
     font-size: 12px;
 }
- @font-face {
-     font-family: 'anshularegular';
-     src: url('../fonts/anshula-regular-webfont.woff2') format('woff2'), url('../fonts/anshula-regular-webfont.woff') format('woff');
-     font-weight: normal;
-     font-style: normal;
+
+@font-face {
+    font-family: 'Anshula';
+    src: url('../fonts/Anshula-Italic.woff2') format('woff2'),
+        url('../fonts/Anshula-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Anshula';
+    src: url('../fonts/Anshula-Regular.woff2') format('woff2'),
+        url('../fonts/Anshula-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 /*-------------------------------------------------------*/
 /* Base styles */
@@ -38,7 +48,7 @@
      background-color: #E8E8E8;
      margin: 0px;
      padding: 0px;
-     font-family: 'anshularegular';
+     font-family: 'Anshula';
 }
  #container {
      height: 100%;
