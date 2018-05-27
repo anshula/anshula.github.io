@@ -291,9 +291,7 @@
      display: block;
      text-align: center;
      font-size: 30px;
-     margin-left: 70px;
-     margin-right: 70px;
-
+     line-height: 1;
      padding: 20px;
 
 
@@ -314,6 +312,9 @@
      overflow: hidden;
      text-overflow: ellipsis;
      margin-top: 15px;
+
+     margin-left: 70px;
+     margin-right: 70px;
 
      padding: 0px;
 }
