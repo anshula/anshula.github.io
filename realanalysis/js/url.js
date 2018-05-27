@@ -108,6 +108,11 @@ function locationHashChanged() {
         fromMobileNavbarClick = false;
         // alert('triggered')
     }
+
+    // change title of html head tag to the title of that comic
+    var comictitle = comicpage.find(".comicheader p").html().split(". ")[1]
+    $("title").html("Real Analysis: " + comictitle)
+
     // else {
     //     alert('not triggered')
     // }
