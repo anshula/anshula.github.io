@@ -5,6 +5,8 @@ var numcomics = comictitles.length;
 var freezeHashChanging = false;
 var fromMobileNavbarClick = false;
 
+var pageChangeDueToUserScrolling = false;
+
 function loadInitialComics(pageNumbers) {
 
     var len = pageNumbers.length;

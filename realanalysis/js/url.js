@@ -8,6 +8,8 @@ function changePage() {
         // console.log("new page");
         if(!freezeHashChanging) {
             // unfreezeScrolling();
+            console.log("page change due to user scrolling");
+            pageChangeDueToUserScrolling = true;
 
              window.location.href = url_start + "#"+current_page;
 
@@ -22,8 +24,15 @@ function changePage() {
 
 function locationHashChanged() {
 
+    // if the hash change ddue to being in the middle of a scroll, don't scroll anymore
     if(freezeHashChanging) {
         // console.log("sorry -- hash changing is frozen");
+        return;
+    }
+
+    // if the hash changed due to the user scrolling a little, don't scroll anymore
+    if(pageChangeDueToUserScrolling) {
+        pageChangeDueToUserScrolling = false;
         return;
     }
 
