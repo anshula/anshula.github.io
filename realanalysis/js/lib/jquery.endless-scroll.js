@@ -142,7 +142,7 @@ EndlessScroll = (function() {
       if (_this.hasContent()) {
         // _this.showContent();
         _this.fireCallback();
-        _this.cleanUpPagesWhenNecessary();
+        // _this.cleanUpPagesWhenNecessary(); // let user see all pages that they have loaded - like facebook (more memory consuming, but more intuitive for the user)
         _this.delayFiringWhenNecessary();
       }
       // _this.removeLoader();
