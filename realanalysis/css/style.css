@@ -235,6 +235,7 @@
 /*-------------------------------------------------------*/
 
  .navbarcollapsebutton {
+    cursor: pointer; /*make cursor clickable*/
     /* position: fixed;
      left: 340px;
      z-index: 2;
