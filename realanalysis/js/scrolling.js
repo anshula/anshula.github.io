@@ -85,7 +85,9 @@ function setUpEndlessScroll() {
                 stickinparent("div[data-comicpage='" + newimgid + "'] .comicheader");
             }
 
-
+            // fade in the image
+            $("div[data-comicpage='" + newimgid + "']").css({opacity: 0.1});
+            $("div[data-comicpage='" + newimgid + "']").animate({ opacity: 1 }, 800);
         }
     });
 }
