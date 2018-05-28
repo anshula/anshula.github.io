@@ -36,6 +36,12 @@ function locationHashChanged() {
     $("#selected").removeAttr("id");
     $(".chapter a[href='"+location.hash+"'] .section").attr("id", "selected");
 
+    // scroll to that part in the table of contents sidebar
+    $("#scrollable").animate({
+        // go to top of comic image, but leave 60 pixels of space (height of header) plus 10 pixels of margin
+        scrollTop: $("#selected").offset().top - $("#scrollable").offset().top + $("#scrollable").scrollTop() - $("#scrollable").height()/2
+    }, "fast");
+
     // change title of html head tag to the title of that comic
     var title = comictitles[parseInt(newPage-1)].title.split(". ")[1]
     $("title").html("Real Analysis: " + title)
