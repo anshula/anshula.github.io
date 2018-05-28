@@ -99,7 +99,6 @@
     */
 }
  #navbar {
-     padding: 20px;
      display: block;
      height: 100%;
      background-color: #444;
@@ -110,7 +109,22 @@
      */
     /*padding: 20px;
     */
-     overflow-y:scroll;
+     overflow-y: hidden;
+}
+
+#navbar #notscrollable {
+    padding: 20px;
+    padding-bottom: 0px; /* so there's not too much padding between not scrollable and scrollable */
+}
+
+#navbar #scrollable {
+    height: calc(100% - 200px);
+    overflow-y:scroll;
+}
+
+#navbar #scrollable > div {
+    padding: 20px;
+    padding-top: 0px; /* so there's not too much padding between not scrollable and scrollable */
 }
  #navbar .title {
      font-size: 40px;
