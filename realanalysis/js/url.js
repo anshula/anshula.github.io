@@ -30,6 +30,10 @@ function locationHashChanged() {
         return;
     }
 
+    // make that part of the table of contents white
+    $("#selected").removeAttr("id");
+    $(".chapter a[href='"+location.hash+"'] .section").attr("id", "selected");
+
     // if the hash changed due to the user scrolling a little, don't scroll anymore
     if(pageChangeDueToUserScrolling) {
         pageChangeDueToUserScrolling = false;
@@ -41,10 +45,6 @@ function locationHashChanged() {
     // alert("freezing hash");
 
     console.log(location.hash);
-
-    // make that part of the table of contents white
-    $("#selected").removeAttr("id");
-    $(".chapter a[href='"+location.hash+"'] .section").attr("id", "selected");
 
     var newPage = parseInt(location.hash.substring(1));
     comicpage = $("div[data-comicpage='"+newPage.toString()+"']")
