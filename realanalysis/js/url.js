@@ -30,9 +30,15 @@ function locationHashChanged() {
         return;
     }
 
+    var newPage = parseInt(location.hash.substring(1));
+    
     // make that part of the table of contents white
     $("#selected").removeAttr("id");
     $(".chapter a[href='"+location.hash+"'] .section").attr("id", "selected");
+
+    // change title of html head tag to the title of that comic
+    var title = comictitles[parseInt(newPage-1)].title.split(". ")[1]
+    $("title").html("Real Analysis: " + title)
 
     // if the hash changed due to the user scrolling a little, don't scroll anymore
     if(pageChangeDueToUserScrolling) {
@@ -46,7 +52,6 @@ function locationHashChanged() {
 
     console.log(location.hash);
 
-    var newPage = parseInt(location.hash.substring(1));
     comicpage = $("div[data-comicpage='"+newPage.toString()+"']")
     // if that has already been loaded, scroll to that position
     if(comicpage.length == 1) {
@@ -108,10 +113,6 @@ function locationHashChanged() {
         fromMobileNavbarClick = false;
         // alert('triggered')
     }
-
-    // change title of html head tag to the title of that comic
-    var comictitle = comicpage.find(".comicheader p").html().split(". ")[1]
-    $("title").html("Real Analysis: " + comictitle)
 
     // else {
     //     alert('not triggered')
