@@ -14,13 +14,15 @@ function loadInitialComics(pageNumbers) {
     var a = "<div class='comicpage' data-comicpage='"
     var b = "'><div class='comicheader'><div><p>"
     var c = "</p></div></div><img src='img/"
-    var d = ".jpg' class='comic'/></div>"
+    var d = ".jpg' alt='"
+    var e = "' class='comic'/></div>"
 
     for (index = 0; index < len; index++) {
         var page = pageNumbers[index];
-        var title = comictitles[page-1].title
+        var title = comictitles[page-1].title;
+        var alt = altText[page];
 
-        var str = a + page + b + title + c + page + d;
+        var str = a + page + b + title + c + page + d + alt + e;
 
         var wrap;
         if ($(".endless_scroll_content").length == 1) {

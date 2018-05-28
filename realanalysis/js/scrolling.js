@@ -32,7 +32,7 @@ function setUpEndlessScroll() {
         fireDelay: 150,
         fireOnce: true,
         ceaseFireOnEmpty: false,
-        callback: function(i, p, d) {
+        callback: function(i, p, direction) {
 
             // if(freezeHashChanging) {
             //     return;
@@ -44,12 +44,13 @@ function setUpEndlessScroll() {
             // cleanup the last endless scroll content
             $('#endless_scroll_content_current').removeAttr('id');
 
-            var imgtagstart = "<div class='comicheader'><div><p>";
-            var imgmiddle = "</p></div></div> <img src='img/";
-            var imgtagend = ".jpg' class='comic' />";
+            var a = "<div class='comicheader'><div><p>";
+            var b = "</p></div></div> <img src='img/";
+            var c = ".jpg' alt='";
+            var d = "' class='comic' />"; // d is already defined in callback
 
             // if the user is scrolling up
-            if (d == "prev") {
+            if (direction == "prev") {
                 var firstimgid = parseInt($(".comicpage:first").attr("data-comicpage"));
 
                 if (firstimgid > 1) { // if there is actually something to scroll up to
@@ -57,9 +58,10 @@ function setUpEndlessScroll() {
                     newimgid = (firstimgid - 1).toString();
 
                     var title = comictitles[parseInt(newimgid-1)].title;
+                    var alt = altText[newimgid];
 
                     str = "<div id='endless_scroll_content_current' class='endless_scroll_content comicpage' data-page='" + p + "' data-comicpage='"+ newimgid +"'>" 
-                                    + imgtagstart + title + imgmiddle + newimgid + imgtagend 
+                                    + a + title + b + newimgid + c + alt + d
                             + "</div>";
                     $(".endless_scroll_inner_wrap").prepend(str);
                     stickinparent("div[data-comicpage='" + newimgid + "'] .comicheader");
@@ -74,9 +76,10 @@ function setUpEndlessScroll() {
                 newimgid = (lastimgid + 1).toString();
 
                 var title = comictitles[parseInt(newimgid-1)].title;
+                var alt = altText[newimgid];
 
                 str = "<div id='endless_scroll_content_current' class='endless_scroll_content comicpage' data-page='" + p + "' data-comicpage='"+ newimgid +"'>" 
-                                    + imgtagstart + title + imgmiddle + newimgid + imgtagend 
+                                    + a + title + b + newimgid + c + alt + d
                             + "</div>";
                 $(".endless_scroll_inner_wrap").append(str);
                 stickinparent("div[data-comicpage='" + newimgid + "'] .comicheader");
