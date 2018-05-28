@@ -356,6 +356,28 @@
 }
 
 
+/* adjust webkit scrollbar on menu */
+#navbar ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  background-color: #555;
+  width: 12px;
+}
+#navbar ::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  background-color: #333;
+}
+
+/* adjust IE scrollbar on menu */
+#navbar {
+  scrollbar-base-color: #555;
+  scrollbar-face-color: #333;
+  scrollbar-track-color: #555;
+  scrollbar-arrow-color: #333;
+}
+
+
+
+
 
 
 
