@@ -40,8 +40,9 @@ function locationHashChanged() {
 
     // scroll to that part in the table of contents sidebar
     $("#scrollable").animate({
-        // go to top of comic image, but leave 60 pixels of space (height of header) plus 10 pixels of margin
-        scrollTop: $("#selected").offset().top - $("#scrollable").offset().top + $("#scrollable").scrollTop() - $("#scrollable").height()/2
+        // scroll so current tab is at the top
+        // then add in a buffer the height of the previous element
+        scrollTop: $("#selected").offset().top - $("#scrollable").offset().top + $("#scrollable").scrollTop() - $("#selected").parent().prev().find("div").outerHeight()
     }, "fast");
 
     // change title of html head tag to the title of that comic
