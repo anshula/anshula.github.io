@@ -270,7 +270,7 @@
      margin: 6px auto;
      transition: 0.7s;
 }
-/*.change .bar1 {
+.change .bar1 {
      -webkit-transform: rotate(-45deg) translate(-5px, 7px);
      transform: rotate(-30deg) translate(-5px, 1px);
 }
@@ -281,7 +281,7 @@
      -webkit-transform: rotate(45deg) translate(-5px, -7px);
      transform: rotate(30deg) translate(-5px, -1px);
 }
-*/
+
 /*-------------------------------------------------------*/
 /* Comic headers and images */
 /*-------------------------------------------------------*/
