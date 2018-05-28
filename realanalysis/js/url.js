@@ -8,7 +8,7 @@ function changePage() {
         // console.log("new page");
         if(!freezeHashChanging) {
             // unfreezeScrolling();
-            console.log("page change due to user scrolling");
+            // console.log("page change due to user scrolling");
             pageChangeDueToUserScrolling = true;
 
              window.location.href = url_start + "#"+current_page;
@@ -29,6 +29,8 @@ function locationHashChanged() {
         // console.log("sorry -- hash changing is frozen");
         return;
     }
+
+    console.log(location.hash);
 
     var newPage = parseInt(location.hash.substring(1));
     
@@ -55,8 +57,6 @@ function locationHashChanged() {
     // freeze hash changin until this function has finished
     freezeHashChanging = true;
     // alert("freezing hash");
-
-    console.log(location.hash);
 
     comicpage = $("div[data-comicpage='"+newPage.toString()+"']")
     // if that has already been loaded, scroll to that position
