@@ -114,10 +114,11 @@
 
 #navbar #notscrollable {
     padding: 20px;
-    padding-bottom: 0px; /* so there's not too much padding between not scrollable and scrollable */
+    padding-bottom: 25px; /* so there's not too much padding between not scrollable and scrollable */
 }
 
 #navbar #scrollable {
+    background-color: #555;
     height: calc(100% - 200px);
     overflow-y:scroll;
 }
