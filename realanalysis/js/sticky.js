@@ -1,5 +1,5 @@
 function stickinparent(selector) {
-    $(selector).stick_in_parent({recalc_every: 50, bottoming: false})
+    $(selector).stick_in_parent({recalc_every: 30, bottoming: false})
         .on("sticky_kit:stick", function(e) {
             $(e.target).attr("style", ""); // clear out the width that sticky-bits adds
 
