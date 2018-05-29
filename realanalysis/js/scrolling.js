@@ -105,12 +105,16 @@ function setUpEndlessScroll() {
                 $(".endless_scroll_inner_wrap").append(str);
                 stickinparent("div[data-comicpage='" + newimgid + "'] .comicheader");
             }
+            
+            // fade in header
+            $("div[data-comicpage='" + newimgid + "'] > .comicheader").css({opacity: 0.1});
+            $("div[data-comicpage='" + newimgid + "'] > .comicheader").animate({ opacity: 1 }, 800);
 
-            // // fade in the image
-            // $("div[data-comicpage='" + newimgid + "']").css({opacity: 0.1});
-            // $("div[data-comicpage='" + newimgid + "']").animate({ opacity: 1 }, 800);
 
-            // inMiddleOfScroll = false;
+            // fade in image
+            $("div[data-comicpage='" + newimgid + "'] > img").css({opacity: 0.1});
+            $("div[data-comicpage='" + newimgid + "'] > img").animate({ opacity: 1 }, 800);
+
         }
     });
 }
