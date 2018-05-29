@@ -42,12 +42,10 @@ function setUpEndlessScroll() {
 
             // inMiddleOfScroll = true;
 
-            // if(freezeHashChanging) {
-            //     return;
-            // }
-
             var newimgid;
             var str;
+
+             
 
             // cleanup the last endless scroll content
             $('#endless_scroll_content_current').removeAttr('id');
@@ -62,6 +60,7 @@ function setUpEndlessScroll() {
                 var firstimgid = parseInt($(".comicpage:first").attr("data-comicpage"));
 
                 if (firstimgid > 1) { // if there is actually something to scroll up to
+                    $('body').css({ 'overflow': 'hidden' });
 
                     var pixels_from_bottom = $("#images").height() - $(window).scrollTop();
                     console.log("a", $("#images").height());
@@ -80,8 +79,11 @@ function setUpEndlessScroll() {
                     // reposition scroll
                     // after image is loaded
                     $("#images").waitForImages(function() {
-                        console.log("b", $("#images").height())
-                        $(window).scrollTop($("#images").height() - pixels_from_bottom - 200)
+                        console.log("b", $("#images").height());
+                        $(window).scrollTop($("#images").height() - pixels_from_bottom);
+                        $('body').css({ 'overflow': 'scroll' });
+
+
                     });
 
                 }

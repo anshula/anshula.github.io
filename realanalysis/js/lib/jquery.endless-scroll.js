@@ -248,12 +248,7 @@ EndlessScroll = (function() {
         // if scrollbar within firing zone
         if (margin) {
           // get scrollbar out of firing zone
-          // console.log("margin")
           target.scrollTop(this.options.inflowPixels);
-
-          // disable automatic scrolling
-          // $('html, body').css({ 'overflow': 'hidden', 'height': '100%' })
-
         }
     }
     return margin; // return that the scrollbar was in the firing zone
