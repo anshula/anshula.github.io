@@ -42,7 +42,8 @@ function locationHashChanged() {
     $("#scrollable").animate({
         // scroll so current tab is at the top
         // then add in a buffer the height of the previous element
-        scrollTop: $("#selected").offset().top - $("#scrollable").offset().top + $("#scrollable").scrollTop() - $("#selected").parent().prev().find("div").outerHeight()
+        // scrollTop: $("#selected").offset().top - $("#scrollable").offset().top + $("#scrollable").scrollTop() - $("#selected").parent().prev().find("div").outerHeight()
+        scrollTop: $("#selected").offset().top - $("#scrollable").offset().top + $("#scrollable").scrollTop() - $("#scrollable").height()/2 + $("#selected").height()/2
     }, "fast");
 
     // change title of html head tag to the title of that comic
