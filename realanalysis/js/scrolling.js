@@ -60,7 +60,7 @@ function setUpEndlessScroll() {
                 var firstimgid = parseInt($(".comicpage:first").attr("data-comicpage"));
 
                 if (firstimgid > 1) { // if there is actually something to scroll up to
-                    $('body').css({ 'overflow': 'hidden' });
+                    // $('body').css({ 'overflow': 'hidden' });
 
                     var pixels_from_bottom = $("#images").height() - $(window).scrollTop();
                     console.log("a", $("#images").height());
@@ -81,7 +81,7 @@ function setUpEndlessScroll() {
                     $("#images").waitForImages(function() {
                         console.log("b", $("#images").height());
                         $(window).scrollTop($("#images").height() - pixels_from_bottom);
-                        $('body').css({ 'overflow': 'scroll' });
+                        // $('body').css({ 'overflow': 'scroll' });
 
 
                     });
