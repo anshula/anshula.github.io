@@ -1,4 +1,5 @@
 var myEndlessScroll;
+// var inMiddleOfScroll = false;
 
 function scrollOnceLoaded(img) {
         $("html, body").animate({
@@ -28,11 +29,18 @@ function setUpEndlessScroll() {
     $(window).endlessScroll({
         pagesToKeep: 4,
         lastPage: numcomics.toString(),
-        inflowPixels: 50,
-        fireDelay: 150,
+        inflowPixels: 200,
+        fireDelay: 200,
         fireOnce: true,
         ceaseFireOnEmpty: false,
         callback: function(i, p, direction) {
+
+            // if(inMiddleOfScroll) {
+            //     console.log("sorry -- already scorlling");
+            //     return;
+            // }
+
+            // inMiddleOfScroll = true;
 
             // if(freezeHashChanging) {
             //     return;
@@ -55,6 +63,9 @@ function setUpEndlessScroll() {
 
                 if (firstimgid > 1) { // if there is actually something to scroll up to
 
+                    var pixels_from_bottom = $("#images").height() - $(window).scrollTop();
+                    console.log("a", $("#images").height());
+
                     newimgid = (firstimgid - 1).toString();
 
                     var title = comictitles[parseInt(newimgid-1)].title;
@@ -65,6 +76,14 @@ function setUpEndlessScroll() {
                             + "</div>";
                     $(".endless_scroll_inner_wrap").prepend(str);
                     stickinparent("div[data-comicpage='" + newimgid + "'] .comicheader");
+
+                    // reposition scroll
+                    // after image is loaded
+                    $("#images").waitForImages(function() {
+                        console.log("b", $("#images").height())
+                        $(window).scrollTop($("#images").height() - pixels_from_bottom - 200)
+                    });
+
                 }
 
             }
@@ -88,6 +107,8 @@ function setUpEndlessScroll() {
             // // fade in the image
             // $("div[data-comicpage='" + newimgid + "']").css({opacity: 0.1});
             // $("div[data-comicpage='" + newimgid + "']").animate({ opacity: 1 }, 800);
+
+            // inMiddleOfScroll = false;
         }
     });
 }

@@ -135,7 +135,8 @@ EndlessScroll = (function() {
       }
       if (!_this.shouldBeFiring()) {
         return;
-      }
+      } 
+      
       _this.resetFireSequenceWhenNecessary();
       _this.acknowledgeFiring();
       // _this.insertLoader();
@@ -145,6 +146,7 @@ EndlessScroll = (function() {
         // _this.cleanUpPagesWhenNecessary(); // let user see all pages that they have loaded - like facebook (more memory consuming, but more intuitive for the user)
         _this.delayFiringWhenNecessary();
       }
+
       // _this.removeLoader();
       return _this.lastContent = _this.content;
     }), this.options.intervalFrequency);
@@ -193,6 +195,7 @@ EndlessScroll = (function() {
     if (shouldTryOrNot) {
       this.didScroll = false;
     }
+
     return shouldTryOrNot;
   };
 
@@ -233,18 +236,27 @@ EndlessScroll = (function() {
     var margin;
     switch (this.scrollDirection) {
       case 'next':
-        margin = innerWrap.height() - $(target).height() <= $(target).scrollTop() + this.options.inflowPixels;
+        margin = innerWrap.height() - $(target).height() < $(target).scrollTop() + this.options.inflowPixels;
+        // if scrollbar within firing zone
         if (margin) {
+          // get scrollbar out of firing zone
           target.scrollTop(innerWrap.height() - $(target).height() - this.options.inflowPixels);
         }
         break;
       case 'prev':
-        margin = $(target).scrollTop() <= this.options.inflowPixels;
+        margin = $(target).scrollTop() < this.options.inflowPixels;
+        // if scrollbar within firing zone
         if (margin) {
+          // get scrollbar out of firing zone
+          // console.log("margin")
           target.scrollTop(this.options.inflowPixels);
+
+          // disable automatic scrolling
+          // $('html, body').css({ 'overflow': 'hidden', 'height': '100%' })
+
         }
     }
-    return margin;
+    return margin; // return that the scrollbar was in the firing zone
   };
 
   EndlessScroll.prototype.calculateScrollableCanvas = function() {
