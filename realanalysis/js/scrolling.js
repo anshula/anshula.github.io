@@ -63,7 +63,6 @@ function setUpEndlessScroll() {
                     // $('body').css({ 'overflow': 'hidden' });
 
                     var pixels_from_bottom = $("#images").height() - $(window).scrollTop();
-                    console.log("a", $("#images").height());
 
                     newimgid = (firstimgid - 1).toString();
 
@@ -79,8 +78,8 @@ function setUpEndlessScroll() {
                     // reposition scroll
                     // after image is loaded
                     $("#images").waitForImages(function() {
-                        console.log("b", $("#images").height());
-                        $(window).scrollTop($("#images").height() - pixels_from_bottom);
+                        $(window).scrollTop($("#images").height()
+                         - pixels_from_bottom);
                         // $('body').css({ 'overflow': 'scroll' });
 
 
