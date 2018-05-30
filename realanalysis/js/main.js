@@ -54,10 +54,10 @@ $(document).ready(function() {
     for (index = 0; index < numcomics; index++) {
         if(comictitles[index].newchapter == "true") {
             chapter_index++;
-            $(".chapter").eq(chapter_index).find("a:first").attr("href", "#"+(index+1));
+            $(".chapter").eq(chapter_index).find("a:first").attr("href", "#/"+(index+1));
         }
 
-        var a = "<a href='#"
+        var a = "<a href='#/"
         var b = "'><div class='section'>"
         var c = "</div></a>"
         $(".chapter").eq(chapter_index).append(a + (index+1) + b + comictitles[index].title + c);
@@ -70,16 +70,27 @@ $(document).ready(function() {
 
     // figure out what the current url should be
     // if invalid url, make it a valid one
-    var page = parseInt(window.location.href.split("#")[1]);
+    var page = parseInt(window.location.href.split("#/")[1]);
+    var pageold = parseInt(window.location.href.split("#")[1]);
     if((page > 0) && (page < (numcomics + 1) )) {
         // scrollto that page so we don't end up just at the previous scroll location on the old page
-        window.location.href = "#"+page;
+        window.location.href = "#/"+page;
         // force a hash change
         locationHashChanged();
     }
+    else if((pageold > 0) && (pageold < (numcomics + 1) )) {
+        // back compatibility when we just used a #
+
+        // scrollto that page so we don't end up just at the previous scroll location on the old page
+        window.location.href = "#/"+pageold;
+        // force a hash change
+        locationHashChanged();
+
+
+    }
     else {
         // start at most recent comic
-        window.location.href = "#"+numcomics;
+        window.location.href = "#/"+numcomics;
         // force a hash change
         locationHashChanged();
     }
@@ -110,7 +121,7 @@ $(document).ready(function() {
         // freezeScrolling();
         freezeHashChanging = true;
         
-        var url_page = window.location.href.split("#")[1];
+        var url_page = window.location.href.split("#/")[1];
         console.log(url_page);
 
         $(this).toggleClass("change"); // change the animation of the navbar collapse button

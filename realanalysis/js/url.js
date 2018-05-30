@@ -1,7 +1,7 @@
 function changePage() {
     var url = window.location.href;
-    var url_start = url.split('#')[0]
-    var url_page  = url.split('#')[1];
+    var url_start = url.split('#/')[0]
+    var url_page  = url.split('#/')[1];
     var current_page = $(".is_stuck:last").parent().attr("data-comicpage");
 
     if(current_page !== url_page) {
@@ -11,7 +11,7 @@ function changePage() {
             // console.log("page change due to user scrolling");
             pageChangeDueToUserScrolling = true;
 
-             window.location.href = url_start + "#"+current_page;
+             window.location.href = url_start + "#/"+current_page;
 
              // alert("unfreezing hash");
         }
@@ -32,7 +32,7 @@ function locationHashChanged() {
 
     console.log(location.hash);
 
-    var newPage = parseInt(location.hash.substring(1));
+    var newPage = parseInt(location.hash.substring(2));
     
     // make that part of the table of contents white
     $("#selected").removeAttr("id");
