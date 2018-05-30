@@ -139,8 +139,7 @@ $(document).ready(function() {
             width: new_width
         }, duration=150)
 
-        
-        // bind once!  so it doens't link to a new event every time button is clicked.
+        // bind once!
         $("#content").one("transitionend", function(){
             // alert("finished animation");
             var comicpage = $("div[data-comicpage='" + url_page + "']");

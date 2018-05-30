@@ -2,12 +2,12 @@ var myEndlessScroll;
 // var inMiddleOfScroll = false;
 
 function scrollOnceLoaded(img) {
-        $("body").animate({
+        $("html, body").animate({
             // go to top of comic image, but leave 60 pixels of space (height of header) plus 10 pixels of margin
-            scrollTop: img.position().top - (60 + 10) 
+            scrollTop: img.offset().top - (60 + 10) 
         }, "fast");
 
-        $("body").promise().done(function() {
+        $("html, body").promise().done(function() {
             freezeHashChanging = false;
             // alert("unfreezing hash changing");
         
@@ -63,6 +63,7 @@ function setUpEndlessScroll() {
                     // $('body').css({ 'overflow': 'hidden' });
 
                     var pixels_from_bottom = $("#images").height() - $(window).scrollTop();
+                    console.log("a", $("#images").height());
 
                     newimgid = (firstimgid - 1).toString();
 
@@ -78,6 +79,7 @@ function setUpEndlessScroll() {
                     // reposition scroll
                     // after image is loaded
                     $("#images").waitForImages(function() {
+                        console.log("b", $("#images").height());
                         $(window).scrollTop($("#images").height() - pixels_from_bottom);
                         // $('body').css({ 'overflow': 'scroll' });
 
