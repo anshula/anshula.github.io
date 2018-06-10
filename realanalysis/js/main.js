@@ -1,5 +1,4 @@
 
-var comictitles = JSON.parse(data); // from the data variable in comics.json
 var numcomics = comictitles.length;
 
 var freezeHashChanging = false;
