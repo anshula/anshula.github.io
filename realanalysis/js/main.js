@@ -56,6 +56,13 @@ $(document).ready(function() {
             $(".chapter").eq(chapter_index).find("a:first").attr("href", "#/"+(index+1));
         }
 
+        if(comictitles[index].newsubchapter) {
+            var a = "<a href='#/"
+            var b = "'><div class='subchaptitle'>"
+            var c = "</div></a>"
+            $(".chapter").eq(chapter_index).append(a + (index+1) + b + comictitles[index].newsubchapter + c);
+        }
+
         var a = "<a href='#/"
         var b = "'><div class='section'>"
         var c = "</div></a>"

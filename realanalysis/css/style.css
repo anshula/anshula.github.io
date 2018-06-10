@@ -156,6 +156,17 @@
      font-weight: bold;
 }
 
+
+ #navbar .chapter .subchaptitle {
+    /*the chapter title*/
+     display: block;
+     margin-top: 5px;
+     margin-bottom: 5px;
+     font-size: 19px;
+     font-style: italic;
+     text-align: left;
+}
+
  #navbar .chapter .chaptitle:last-of-type {
     margin-bottom: 25px;
  }
