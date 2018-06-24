@@ -11,5 +11,6 @@ comictitles = [
     {"title" : "10. How does proving irrationality relate to analysis?"},
     {"title" : "11. Why does analysis feel so unrelated to calculus?"},
     {"title" : "12. How do we know where to put numbers on a number line?", "newsubchapter": "Ordered Sets"},
-    {"title" : "13. Does every set have a biggest number?"}
+    {"title" : "13. Does every set have a biggest number?"},
+    {"title" : "14. Isn't infinity the biggest element in the set {1,2,3...}?"}
 ];
