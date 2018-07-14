@@ -13,5 +13,6 @@ comictitles = [
     {"title" : "12. How do we know where to put numbers on a number line?", "newsubchapter": "Ordered Sets"},
     {"title" : "13. Does every set have a biggest number?"},
     {"title" : "14. Isn't infinity the biggest element in the set {1,2,3...}?"},
-    {"title" : "15. How do you prove infinity isn't an integer?"}
+    {"title" : "15. How do you prove infinity isn't an integer?"},
+    {"title" : "16. Does every upper bounded set have a biggest element?"}
 ];
