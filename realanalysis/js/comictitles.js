@@ -15,6 +15,6 @@ comictitles = [
     {"title" : "14. Isn't infinity the biggest element in the set {1,2,3...}?"},
     {"title" : "15. How do you prove infinity isn't an integer?"},
     {"title" : "16. Does every upper bounded set have a biggest element?"},
-    {"title" : "17. What's the most important upper bound of a set?"}
-
+    {"title" : "17. What's the most important upper bound of a set?"},
+    {"title" : "18. Does every upper-bounded set contain its supremum?"}
 ];
