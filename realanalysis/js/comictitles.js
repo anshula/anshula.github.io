@@ -17,6 +17,7 @@ comictitles = [
     {"title" : "16. Does every upper bounded set have a biggest element?"},
     {"title" : "17. What's the most important upper bound of a set?"},
     {"title" : "18. Does every upper-bounded set contain its supremum?"},
-    {"title" : "19. What's the most important lower bound of a set?"}
+    {"title" : "19. What's the most important lower bound of a set?"},
+    {"title" : "20. Does every lower-bounded set contain its infimum?"}
 
 ];
