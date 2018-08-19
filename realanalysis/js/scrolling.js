@@ -51,7 +51,7 @@ function setUpEndlessScroll() {
             $('#endless_scroll_content_current').removeAttr('id');
 
             var a = "<div class='comicheader'><div><p>";
-            var b = "</p></div></div> <img src='img/";
+            var b = "</p></div></div> <img src='img/img_unprocessed/3_Web/";
             var c = ".jpg' alt='";
             var d = "' class='comic' />"; // d is already defined in callback
 

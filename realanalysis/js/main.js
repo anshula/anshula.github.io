@@ -12,7 +12,7 @@ function loadInitialComics(pageNumbers) {
 
     var a = "<div class='comicpage' data-comicpage='"
     var b = "'><div class='comicheader'><div><p>"
-    var c = "</p></div></div><img src='img/"
+    var c = "</p></div></div><img src='img/img_unprocessed/3_Web/"
     var d = ".jpg' alt='"
     var e = "' class='comic'/></div>"
 
