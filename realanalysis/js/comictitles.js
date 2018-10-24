@@ -19,6 +19,7 @@ comictitles = [
     {"title" : "18. Does every upper-bounded set contain its supremum?"},
     {"title" : "19. What's the most important lower bound of a set?"},
     {"title" : "20. Does every lower-bounded set contain its infimum?"},
-    {"title" : "21. What's the point of formal definitions?"}
+    {"title" : "21. What's the point of formal definitions?"},
+    {"title" : "22. How can we prove something is an infimum?"}
 
 ];
