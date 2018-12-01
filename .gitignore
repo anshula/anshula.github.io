@@ -2,3 +2,4 @@ realanalysis/img/img_unprocessed/*
 !realanalysis/img/img_unprocessed/3_Web
 realanalysis/js/alt_text/*
 realanalysis/interviews/*
+.DS_Store
