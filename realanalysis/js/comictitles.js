@@ -22,6 +22,6 @@ comictitles = [
     {"title" : "21. What's the point of formal definitions?"},
     {"title" : "22. How can we prove something is an infimum?"},
     {"title" : "23. What's the point of formal proofs when we have intuition?"},
-    {"title" : "24. Is the infimum of A equal to the negative supremum of negative A?"}
+    {"title" : "24. Does inf(A) equal -sup(-A)?"}
 
 ];
