@@ -23,7 +23,8 @@ comictitles = [
     {"title" : "22. How can we prove something is an infimum?"},
     {"title" : "23. What's the point of formal proofs when we have intuition?"},
     {"title" : "24. Does inf(A) equal -sup(-A)?"},
-    {"title" : "25. What is a number?", "newsubchapter": "Fields"}
+    {"title" : "25. What is a number?", "newsubchapter": "Fields"},
+    {"title" : "26. What is a complex number?"}
 
 
 ];
