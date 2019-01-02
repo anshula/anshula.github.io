@@ -317,7 +317,7 @@
     margin: 0;
      display: block;
      text-align: center;
-     font-size: 30px;
+     font-size: 20px;
      line-height: 1;
      padding: 20px;
 
@@ -339,7 +339,7 @@
      white-space: nowrap;
      overflow: hidden;
      text-overflow: ellipsis;
-     margin-top: 15px;
+     margin-top: 20px;
 
      margin-left: 70px;
      margin-right: 70px;
