@@ -24,7 +24,7 @@ comictitles = [
     {"title" : "23. What's the point of formal proofs when we have intuition?"},
     {"title" : "24. Does inf(A) equal -sup(-A)?"},
     {"title" : "25. What is a number?", "newsubchapter": "Fields"},
-    {"title" : "26. What is a complex number?"}
-
+    {"title" : "26. What is a complex number?"},
+    {"title" : "27. What should a universe of numbers look like?"}
 
 ];
