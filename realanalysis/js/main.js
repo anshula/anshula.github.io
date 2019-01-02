@@ -70,6 +70,10 @@ $(document).ready(function() {
 
     }
 
+    // start at creating multilevel navigation (that hides unnecessary items)
+    // $(".section").hide()
+    // $(".subchaptitle").hide()
+
     /*-------------------------------------------------------*/
     /* Go to the correct page */
     /*-------------------------------------------------------*/
