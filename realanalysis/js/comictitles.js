@@ -25,6 +25,7 @@ comictitles = [
     {"title" : "24. Does inf(A) equal -sup(-A)?"},
     {"title" : "25. What is a number?", "newsubchapter": "Fields"},
     {"title" : "26. What is a complex number?"},
-    {"title" : "27. What should a universe of numbers look like?"}
+    {"title" : "27. What should a universe of numbers look like?"},
+    {"title" : "28. How should we order fields?"}
 
 ];
