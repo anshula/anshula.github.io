@@ -27,6 +27,7 @@ comictitles = [
     {"title" : "26. What is a complex number?"},
     {"title" : "27. What should a universe of numbers look like?"},
     {"title" : "28. How should we order fields?"},
-    {"title" : "29. Is the complex field an ordered field?"}
+    {"title" : "29. Is the complex field an ordered field?"},
+    {"title" : "30. What's so special about the reals?", "newsubchapter": "The Real Number Field"},
 
 ];
