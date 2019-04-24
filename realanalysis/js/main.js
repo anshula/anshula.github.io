@@ -99,8 +99,8 @@ $(document).ready(function() {
 
     }
     else {
-        // start at most recent comic
-        window.location.href = "#/"+numcomics;
+        // start at the second comic
+        window.location.href = "#/2";
         // force a hash change
         locationHashChanged();
     }
