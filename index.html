@@ -21,6 +21,8 @@
     <script type="text/javascript" src="js/respond.min.js"></script>
     <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
     <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="js/jquery-ui-map.js"></script>
     <script type="text/javascript" src="js/jquery.carouFredSel.js"></script>
     <script type="text/javascript" src="js/plugins.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
@@ -63,10 +65,10 @@
             <nav class="menu">
                 <ul class="tabs">
                     <li class="tmenu"><a href="#profile" class="tab-profile"><i>&#x43;</i>Profile</a></li>
-                    <li class="tmenu"><a href="#research"><i>&#x59;</i>Research</a></li>
-                    <li class="tmenu"><a href="#teaching"><i>&#xe0d0;</i>Teaching</a></li>
-                    <li class="tmenu"><a href="#writing"><i>&#x35;</i>Writing</a></li>
-                </ul>
+                    <li class="tmenu"><a href="#research"><i>&#xe124;</i>Research</a></li>
+                    <li class="tmenu"><a href="#talks"><i>&#xe0d0;</i>Talks</a></li>
+                    <li class="tmenu"><a href="#books"><i>&#x59;</i>Writing</a></li>
+              </ul>
                 <a class="prev" id="menu-prev" href="#">&#xe073;</a>
                 <a class="next" id="menu-next" href="#">&#xe076;</a>
             </nav>
@@ -76,7 +78,7 @@
             <div id="profile"> 
 
                 <!-- About section -->
-                <div class="about" >
+                <div class="about">
                     <div class="photo-inner">
                         <ul>
                             <li><img src="images/photo-a.jpg" height="186" width="153" /></li>
@@ -87,99 +89,130 @@
                     <h3></h3>
                      <p style="font-size: 13px; line-height: 15px;"> Hello!  I recently completed my undergraduate studies at MIT in mathematics and history. </p>
                     <p style="font-size: 13px; line-height: 15px;">I currently do research in formal verification and automated theorem proving.   I have previously conducted research in robotics, nanosystems, and astrophysics. </p>
-                     <p style="font-size: 13px; line-height: 15px;"> <a target="_blank" href="Anshula_CV.pdf" style="text-decoration: underline;">Download my research CV here.</a></p>
+                     <p style="font-size: 13px; line-height: 15px;"> <a target="_blank" href="pdf/Anshula_CV.pdf" style="text-decoration: underline;">View my CV (PDF).</a></p>
                      <p></p>
                     
                 </div>
-
                 <!-- /About section -->
-                <!--<ul class="personal-info">
-                    <li><label style="font-weight: normal">I recently completed my undergraduate studies at MIT in mathematics and history.  </label></li>
 
-                    <li><label style="font-weight: normal">I currently do research in formal verification and automated theorem proving.   I have previously conducted research in robotics, nanosystems, and astrophysics. </label></li>
-
-                    <li><label style="font-weight: normal"><a target="_blank" href="Anshula_CV.pdf" style="text-decoration: underline;">Download my research CV here.</a></label></li>
-            
-                </ul>-->
+                <!-- Personal info section -->
+                <!-- /Personal info section -->
             </div>        
             <!-- /Profile --> 
-            
 
             <!-- Research -->
             <section id="research" class="resume">
 
                 <!-- Timeline for Research  -->   
                 <div class="timeline-section">
-                    <h3 class="main-heading">Research</h3>   
+                    <h3 class="main-heading">Research Experience</h3>   
                     <ul class="timeline">
                         <li>     
                             <div class="timelineUnit">  
-                                <h4>Real Analysis Comics<span class="timelineDate">2018 - Present</span></h4>
-                                <p>asdf</p>
-                                
+                                <h4>MIT Center for Brains, Minds, and Machines<span class="timelineDate">Spring '19</span></h4>
+                                <h5>Research Assistant</h5>
+                                <p>Designed reinforcement learning environment to prove mathematical theorems in linear algebra.</p>
+                            </div>
+                        </li>
+                        <li> 
+                            <div class="timelineUnit">  
+                                <h4>MIT Distributed Robotics Lab<span class="timelineDate">Spring '16, Fall '17–Fall '18</span></h4>
+                                <h5>Research Assistant</h5>
+                                <p>Constructed risk-estimating cost function and developed path-planning algorithms for safer autonomous vehicles.</p>
+                            </div>
+                        </li>
+                        <li> 
+                            <div class="timelineUnit">  
+                                <h4>MITRE Nanosystems Group<span class="timelineDate">Summer '16</span></h4>
+                                <h5>Research Assistant</h5>
+                                <p>Developed circuits and algorithms for non-invasive medical device to reduce size, weight, and required power.</p>
+                            </div>
+                        </li>
+                        <li> 
+                            <div class="timelineUnit">  
+                                <h4>MIT Exoplanet Theory Lab<span class="timelineDate">Summer '15</span></h4>
+                                <h5>Research Assistant</h5>
+                                <p>Algorithmically classified thousands of life-identifying chemical spectra to pave way for detecting life on other planets.</p>
+                            </div>
+                        </li>
+                        <li> 
+                            <div class="timelineUnit">  
+                                <h4>NASA Goddard Space Flight Center<span class="timelineDate"> Summer '14–Summer '15</span></h4>
+                                <h5>Research Assistant</h5>
+                                <p>Developed microlensing-based exoplanet detection algorithms to be deployed on NASA’s WFIRST telescope.</p>
                             </div>
                         </li>
                         <div class="clear"></div>
-                    </ul> 
+                        </ul>  
                 </div>
-                <!-- /Timeline for Research  -->           
-                <div class="clear"></div>
+                <!-- /Timeline for Research  -->
+
+                <!-- Publications and Awards -->
+                <div class="skills-section">
+            
+
+                    <h3 class="main-heading">Publications</h3> 
+                    <ul class="skills">
+                        <li>
+                            <h4 style="line-height: 20px">
+                                <p style="font-weight: 500; margin-top: 6px">Dynamic Risk Density for Autonomous Navigation in Cluttered Environments without Object Detection</p>
+                                <p style="font-style: italic; margin-top: 6px">ICRA 2019.</p>
+                                <p style="font-weight: 100; margin-top: 6px">Authors: Alyssa Pierson, Cristian Ioan Vasile, Anshula Gandhi, Wilko Schwarting, Sertac Karaman, and Daniela Rus.</p>
+                            </h4>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /Publications and Awards -->
+
+                 <div class="clear"></div>
             </section>
             <!-- /Research --> 
 
-            <!-- Teaching -->
-            <section id="teaching" class="resume">
+            <!-- Talks -->
+            <section id="talks" class="resume">
 
-                <!-- Timeline for Teaching  -->   
+                <!-- Timeline for Talks  -->   
                 <div class="timeline-section">
-                    <h3 class="main-heading">Teaching</h3>   
+                    <h3 class="main-heading">Talks </h3>   
                     <ul class="timeline">
-                        <li class="comicslink">     
-                            <a href="/realanalysis" target="_blank">       
-                            <div class="timelineUnit">  
-                                <h4>Real Analysis Comics</h4>
-                                <!--<h5>Real analysis is the math subject that formalizes calculus.</h5>-->
-                                <!--<h5>4.6/5.0 GPA</h5>-->
-                                <p>I've written a few comics that teach real analysis (the mathematics of formalizing calculus) by asking and answering the philosophical questions that gave rise to each real analysis concept.</p>
-                                
+                        <li>
+                            <div class="timelineUnit">
+
+                                <h4>Additive Latin Transversals using Combinatorial Nullstellensatz<span class="timelineDate">Spring '19</span></h4>
+                                <p>Expository talk based on Noga Alon's <a href="https://m.tau.ac.il/~nogaa/PDFS/alt2.pdf" target="_blank" style="text-decoration: underline;">paper</a> given in MIT’s Seminar on Combinatorics course. <a href="pdf/CombinatorialNullstellensatz_Talk.pdf" target="_blank" style="text-decoration: underline;"> View my illustrated slides</a>.
+                                </p>
                             </div>
-                            </a>
                         </li>
-                        <div class="clear"></div>
-                    </ul> 
                 </div>
-                <!-- /Timeline for Teaching  -->           
-                <div class="clear"></div>
+                <!-- /Timeline for Talks  -->
+
+
+                 <div class="clear"></div>
             </section>
-            <!-- /Teaching --> 
+            <!-- /Talks --> 
 
+            <!-- Books -->
+            <section id="books" class="resume">
 
-            <!-- Writing -->
-            <section id="writing" class="resume">
-
-                <!-- Timeline for Writing  -->   
+                <!-- Timeline for Research  -->   
                 <div class="timeline-section">
                     <h3 class="main-heading">Writing</h3>   
                     <ul class="timeline">
-                        <li class="comicslink">     
-                            <a href="http://anshula.com/realanalysis" target="_blank">       
-                            <div class="timelineUnit">  
+                        <li>
+                            <div class="timelineUnit">
                                 <h4>Real Analysis Comics</h4>
-                                <!--<h5>Real analysis is the math subject that formalizes calculus.</h5>-->
-                                <!--<h5>4.6/5.0 GPA</h5>-->
-                                <p>I've written a few comics that teach real analysis (the mathematics of formalizing calculus) by asking and answering the philosophical questions that gave rise to each real analysis concept.  See anshula.com/realanalysis.</p>
-                                
+                                <p>I have written a few comics that teach real analysis (the mathematics of formalizing calculus) by asking and answering the philosophical questions that gave rise to each real analysis concept.  <a href="http://anshula.com/realanalysis" target="_blank" style="text-decoration: underline">Read them at anshula.com/realanalysis</a>.</p>
                             </div>
-                            </a>
                         </li>
                         <div class="clear"></div>
-                    </ul> 
+                        </ul>  
                 </div>
-                <!-- /Timeline for Writing  -->           
-                <div class="clear"></div>
-            </section>
-            <!-- /Writing --> 
+                <!-- /Timeline for Research  -->
 
+
+                 <div class="clear"></div>
+            </section>
+            <!-- /Books --> 
 
         </section>
         <!-- /Content -->
