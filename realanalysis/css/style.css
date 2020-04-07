@@ -45,7 +45,13 @@
     */
 }
  body {
-     background-color: #E8E8E8;
+    background-color: #E8E8E8;
+    
+    
+/*    background-image: url("../img/watercolor_bg.jpg");
+    background-size: 700px auto;
+     */
+ 
      margin: 0px;
      padding: 0px;
      font-family: 'Anshula';
