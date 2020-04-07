@@ -161,10 +161,10 @@ $(document).ready(function() {
         
     });
 
-    // if(isMobile) {
-    //hide navbar
-    $(".navbarcollapsebutton").trigger("click");
-    //}
+    if(isMobile) {
+        //hide navbar
+        $(".navbarcollapsebutton").trigger("click");
+    }
 
     /*-------------------------------------------------------*/
     /* Make endless scrolling work */
