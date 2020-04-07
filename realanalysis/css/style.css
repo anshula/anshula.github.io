@@ -130,7 +130,6 @@
 }
 
 #navbar #scrollable > div {
-    padding: 20px;
     padding-top: 0px; /* so there's not too much padding between not scrollable and scrollable */
 }
  #navbar .title {
@@ -153,13 +152,27 @@
     color: #fff;
 }
 
+ #navbar .chapter {
+    padding-left: 20px;
+    margin-bottom: 10px;
+ }
+
  #navbar .chapter .chaptitle {
+    margin-bottom: 10px;
+
     /*the chapter title*/
+     background-color: #333;
      display: block;
-     margin-top: 25px;
-     padding-bottom: 10px;
+     padding-bottom: 5px;
+     padding-top: 5px;
+     padding-left: 5px;
      font-size: 20px;
      font-weight: bold;
+
+     position: relative;
+     left: -20px;
+     width: 300px;
+
 }
 
 
@@ -168,9 +181,14 @@
      display: block;
      margin-top: 5px;
      margin-bottom: 5px;
-     font-size: 19px;
+     font-size: 13px;
      font-style: italic;
      text-align: left;
+}
+
+ #navbar .chaptitle[disabled="disabled"] {
+     color: #aaa;
+     margin-bottom: 0px;
 }
 
  #navbar .chapter .chaptitle:last-of-type {
@@ -191,9 +209,8 @@
      color: #444;
      border-radius: 5px;
 }
- #navbar a[disabled="disabled"] {
-     color: #aaa;
-}
+
+
 
 /*-------------------------------------------------------*/
 /* Jump to button */
@@ -382,15 +399,15 @@
 }
 #navbar ::-webkit-scrollbar-thumb {
   border-radius: 0px;
-  background-color: #333;
+  background-color: #222;
 }
 
 /* adjust IE scrollbar on menu */
 #navbar {
   scrollbar-base-color: #555;
-  scrollbar-face-color: #333;
+  scrollbar-face-color: #222;
   scrollbar-track-color: #555;
-  scrollbar-arrow-color: #333;
+  scrollbar-arrow-color: #222;
 }
 
 
