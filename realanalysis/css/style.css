@@ -182,8 +182,8 @@
      text-decoration: none;
 }
  #navbar a .section {
-     padding: 10px 15px 10px 15px;
-     font-size: 19px;
+     padding: 5px 15px 5px 15px;
+     font-size: 13px;
      line-height: 1;
 }
  #navbar a:hover .section,  #navbar a .section#selected{
