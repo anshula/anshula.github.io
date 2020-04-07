@@ -65,8 +65,6 @@ function locationHashChanged() {
     if(comicpage.length == 1) {
         // console.log("page exists");
         scrollToComic(comicpage);
-        
-
     }
     // otherwise, load the new page
     else {
@@ -88,16 +86,20 @@ function locationHashChanged() {
         
 
         // load in the new comics
-        var pages;
-        if(newPage == 1) {
-            pages = [newPage, newPage+1];
+        var numComicsToLoadAtOnce = 10;
+        var min = newPage - numComicsToLoadAtOnce;
+        var max = newPage + numComicsToLoadAtOnce;
+
+        if (min < 1) {
+            min = 1;
         }
-        else if(newPage == numcomics) {
-            pages = [newPage-1, newPage];
+        if (max > numcomics) {
+            max = numcomics;
         }
-        else {
-            pages = [newPage-1, newPage, newPage+1];
-        }
+
+        var pages = [];
+        for (var i=min;i<=max;i++) {pages.push(i)};
+        // console.log(pages);
 
         loadInitialComics(pages);
 
