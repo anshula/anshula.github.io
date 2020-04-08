@@ -177,7 +177,7 @@
 
      position: relative;
      left: -20px;
-     width: 283px;
+     width: 300px;
 
 }
 
@@ -401,7 +401,7 @@
 #navbar ::-webkit-scrollbar {
   -webkit-appearance: none;
   background-color: #555;
-  width: 12px;
+  width: 0px;
 }
 #navbar ::-webkit-scrollbar-thumb {
   border-radius: 0px;
