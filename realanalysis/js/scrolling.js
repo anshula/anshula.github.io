@@ -45,8 +45,6 @@ function setUpEndlessScroll() {
             var newimgid;
             var str;
 
-             
-
             // cleanup the last endless scroll content
             $('#endless_scroll_content_current').removeAttr('id');
 
@@ -55,12 +53,16 @@ function setUpEndlessScroll() {
             var c = ".jpg' alt='";
             var d = "' class='comic' />"; // d is already defined in callback
 
+            var numComicsToLoadAtOnceWhileScrolling = 10;
+
             // if the user is scrolling up
             if (direction == "prev") {
                 var firstimgid = parseInt($(".comicpage:first").attr("data-comicpage"));
 
                 if (firstimgid > 1) { // if there is actually something to scroll up to
                     // $('body').css({ 'overflow': 'hidden' });
+
+                    
 
                     var pixels_from_bottom = $("#images").height() - $(window).scrollTop();
 
@@ -95,14 +97,27 @@ function setUpEndlessScroll() {
 
                 newimgid = (lastimgid + 1).toString();
 
-                var title = comictitles[parseInt(newimgid-1)].title;
-                var alt = altText[newimgid];
 
-                str = "<div class='endless_scroll_content comicpage' data-comicpage='"+ newimgid +"'>" 
-                                    + a + title + b + newimgid + c + alt + d
-                            + "</div>";
-                $(".endless_scroll_inner_wrap").append(str);
-                stickinparent("div[data-comicpage='" + newimgid + "'] .comicheader");
+                var min = parseInt(newimgid);
+                var max = parseInt(newimgid) + numComicsToLoadAtOnceWhileScrolling;
+                if (max > numcomics) {
+                    max = numcomics;
+                }
+
+                for (index = min; index <= max; index++) {
+                    var title = comictitles[index-1].title;
+                    var alt = altText[index];
+
+                    str = "<div class='endless_scroll_content comicpage' data-comicpage='"+ index.toString() +"'>" 
+                              + a + title + b + index.toString() + c + alt + d
+                         + "</div>";
+                    $(".endless_scroll_inner_wrap").append(str);
+                    stickinparent("div[data-comicpage='" + index.toString() + "'] .comicheader");
+                }
+
+
+                
+                
             }
             
             // fade in header
