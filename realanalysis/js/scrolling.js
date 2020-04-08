@@ -45,9 +45,6 @@ function setUpEndlessScroll() {
             var newimgid;
             var str;
 
-            // cleanup the last endless scroll content
-            $('#endless_scroll_content_current').removeAttr('id');
-
             var a = "<div class='comicheader'><div><p>";
             var b = "</p></div></div> <img src='img/img_unprocessed/3_Web/";
             var c = ".jpg' alt='";
