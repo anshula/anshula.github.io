@@ -121,6 +121,10 @@
 #navbar #notscrollable {
     padding: 20px;
     padding-bottom: 25px; /* so there's not too much padding between not scrollable and scrollable */
+
+    position: relative;
+    z-index: 10;
+    box-shadow: 3px 3px 3px black;
 }
 
 #navbar #scrollable {
@@ -158,6 +162,8 @@
  }
 
  #navbar .chapter .chaptitle {
+    z-index: 0;
+
     margin-bottom: 10px;
 
     /*the chapter title*/
@@ -274,7 +280,7 @@
      left: 340px;
      z-index: 2;
     */
-     background-color: #444;
+     background-color: #333;
      border: none;
      color: #E8E8E8;
      text-align: center;
@@ -352,7 +358,7 @@
      height: 60px;
      top: 0;
      right: 0;
-     box-shadow: -5px 5px 10px #444;
+     box-shadow: -3px 3px 7px #444;
      background-color: #555;
      z-index: 1;
 }
