@@ -69,7 +69,7 @@ function setUpEndlessScroll() {
                     var title = comictitles[parseInt(newimgid-1)].title;
                     var alt = altText[newimgid];
 
-                    str = "<div id='endless_scroll_content_current' class='endless_scroll_content comicpage' data-comicpage='"+ newimgid +"'>" 
+                    str = "<div class='endless_scroll_content comicpage' data-comicpage='"+ newimgid +"'>" 
                                     + a + title + b + newimgid + c + alt + d
                             + "</div>";
                     $(".endless_scroll_inner_wrap").prepend(str);
@@ -98,7 +98,7 @@ function setUpEndlessScroll() {
                 var title = comictitles[parseInt(newimgid-1)].title;
                 var alt = altText[newimgid];
 
-                str = "<div id='endless_scroll_content_current' class='endless_scroll_content comicpage' data-comicpage='"+ newimgid +"'>" 
+                str = "<div class='endless_scroll_content comicpage' data-comicpage='"+ newimgid +"'>" 
                                     + a + title + b + newimgid + c + alt + d
                             + "</div>";
                 $(".endless_scroll_inner_wrap").append(str);
