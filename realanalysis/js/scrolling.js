@@ -59,30 +59,39 @@ function setUpEndlessScroll() {
                 if (firstimgid > 1) { // if there is actually something to scroll up to
                     // $('body').css({ 'overflow': 'hidden' });
 
-                    
-
-                    var pixels_from_bottom = $("#images").height() - $(window).scrollTop();
+                    // var pixels_from_bottom = $("#images").height() - $(window).scrollTop();
 
                     newimgid = (firstimgid - 1).toString();
 
-                    var title = comictitles[parseInt(newimgid-1)].title;
-                    var alt = altText[newimgid];
 
-                    str = "<div class='endless_scroll_content comicpage' data-comicpage='"+ newimgid +"'>" 
-                                    + a + title + b + newimgid + c + alt + d
-                            + "</div>";
-                    $(".endless_scroll_inner_wrap").prepend(str);
-                    stickinparent("div[data-comicpage='" + newimgid + "'] .comicheader");
+                    var min = parseInt(newimgid) - numComicsToLoadAtOnceWhileScrolling;
+                    var max = parseInt(newimgid);
+                    if (min < 1) {
+                        min = 1;
+                    }
+
+
+                    for (index = max; index >= min; index--) {
+                        console.log(index)
+                        var title = comictitles[index-1].title;
+                        var alt = altText[index];
+
+                        str = "<div class='endless_scroll_content comicpage' data-comicpage='"+ index.toString() +"'>" 
+                                  + a + title + b + index.toString() + c + alt + d
+                             + "</div>";
+                        $(".endless_scroll_inner_wrap").prepend(str);
+                        stickinparent("div[data-comicpage='" + index.toString() + "'] .comicheader");
+                    }
 
                     // reposition scroll
                     // after image is loaded
-                    $("#images").waitForImages(function() {
-                        $(window).scrollTop($("#images").height()
-                         - pixels_from_bottom);
-                        // $('body').css({ 'overflow': 'scroll' });
+                    // $("#images").waitForImages(function() {
+                    //     $(window).scrollTop($("#images").height()
+                    //      - pixels_from_bottom);
+                    //     // $('body').css({ 'overflow': 'scroll' });
 
 
-                    });
+                    // });
 
                 }
 
