@@ -1,6 +1,6 @@
 comictitles = [
-    {"title" : "1. What is this book?", "newchapter": "true", "newsubchapter": "About this book"}, 
-    {"title" : "2. What is real analysis?", "newsubchapter": "About real analysis"}, 
+    {"title" : "1. What is this book?", "newchapter": "true", "newsubchapter": "About This Book"}, 
+    {"title" : "2. What is real analysis?", "newsubchapter": "About Real Analysis"}, 
     {"title" : "3. Why do real analysis?"},
     {"title" : "4. Why do real analysis books rarely use pictures?"},
     {"title" : "5. How do you prove that something doesn't exist?", "newchapter": "true", "newsubchapter": "Irrationality"},
