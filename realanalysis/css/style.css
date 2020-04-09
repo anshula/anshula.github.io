@@ -171,7 +171,7 @@
      font-size: 20px;
      font-weight: bold;
 
-     width: 295px;
+     width: 285px;
 
 }
 
@@ -182,7 +182,9 @@
      background-color: #333;
      padding: 5px;
      padding-left: 10px;
+     
      font-size: 13px;
+     text-transform: uppercase;
      font-weight: bold;
      text-align: left;
 }
@@ -191,10 +193,6 @@
      color: #aaa;
      margin-bottom: 0px;
 }
-
- #navbar .chapter .chaptitle:last-of-type {
-    margin-bottom: 25px;
- }
 
  #navbar a {
      color: #eee;
@@ -396,11 +394,11 @@
 #navbar ::-webkit-scrollbar {
   -webkit-appearance: none;
   background-color: #555;
-  width: 0px;
+  width: 10px;
 }
 #navbar ::-webkit-scrollbar-thumb {
   border-radius: 0px;
-  background-color: #222;
+  background-color: #000;
 }
 
 /* adjust IE scrollbar on menu */
