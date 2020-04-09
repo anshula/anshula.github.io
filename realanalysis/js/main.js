@@ -49,30 +49,32 @@ $(document).ready(function() {
     /* Let navbar be populated by json */
     /*-------------------------------------------------------*/
     var chapter_index = -1;
-
+    var current_subchapter = "";
     for (index = 0; index < numcomics; index++) {
-        if(comictitles[index].newchapter == "true") {
+        if(comictitles[index].newchapter) {
             chapter_index++;
             $(".chapter").eq(chapter_index).find("a:first").attr("href", "#/"+(index+1));
         }
+
 
         if(comictitles[index].newsubchapter) {
             var a = "<a href='#/"
             var b = "'><div class='subchaptitle'>"
             var c = "</div></a>"
+
             $(".chapter").eq(chapter_index).append(a + (index+1) + b + comictitles[index].newsubchapter + c);
+
+            current_subchapter = comictitles[index].newsubchapter.replace(/\s/g, '') // remove spaces from title
         }
 
         var a = "<a href='#/"
-        var b = "'><div class='section'>"
-        var c = "</div></a>"
-        $(".chapter").eq(chapter_index).append(a + (index+1) + b + comictitles[index].title + c);
+        var b = "'><div class='section "
+        var c = "'>"
+        var d = "</div></a>"
+        $(".chapter").eq(chapter_index).append(a + (index+1) + b + current_subchapter + c + comictitles[index].title + d);
 
     }
 
-    // start at creating multilevel navigation (that hides unnecessary items)
-    // $(".section").hide()
-    // $(".subchaptitle").hide()
 
     /*-------------------------------------------------------*/
     /* Go to the correct page */

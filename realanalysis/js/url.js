@@ -38,6 +38,11 @@ function locationHashChanged() {
     $("#selected").removeAttr("id");
     $(".chapter a[href='"+location.hash+"'] .section").attr("id", "selected");
 
+    // hide the other subsections
+    $(".section").hide() // hide all of the links
+    var current_subsection = $("#selected").attr("class").split(' ')[1]  // then reshow all the links in the correct subsection
+    $("."+current_subsection).show()
+
     // scroll to that part in the table of contents sidebar
     $("#scrollable").animate({
         // scroll so current tab is at the top
