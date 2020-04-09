@@ -52,7 +52,7 @@ function locationHashChanged() {
     }, "fast");
 
     // change title of html head tag to the title of that comic
-    var title = comictitles[parseInt(newPage-1)].title.split(". ")[1]
+    var title = comictitles[parseInt(newPage-1)].title
     $("title").html("Real Analysis: " + title)
 
     // if the hash changed due to the user scrolling a little, don't scroll anymore
