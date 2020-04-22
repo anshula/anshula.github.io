@@ -97,7 +97,9 @@
      left:0;
      top:0;
      bottom: 0;
-     transition: all .25s;
+     transition: all .25s; /* same as duration of .is_stuck animate in main.js file */
+
+     z-index: 10;
 }
  #navbarcontainer.collapsed {
      left:-300px;
