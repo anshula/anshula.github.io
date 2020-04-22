@@ -127,7 +127,7 @@
 
     position: relative;
     z-index: 10;
-    box-shadow: 3px 3px 3px #ae8847;
+    box-shadow: 0px 3px 3px #b5ab9a;
 }
 
 #navbar #scrollable {
@@ -151,8 +151,8 @@
      background-color: #E2D6C0;
 }
  #navbar a:hover .section,  #navbar a .section#selected{
-     color: #3a2620;
-     background-color: #a6acb0;
+     color: #2d2b26;
+     background-color: #cbc1ad;
 }
 
  #navbar .title {
@@ -201,6 +201,10 @@
 
 }
 
+ #navbar .chapter .chaptitle:hover {
+    background-color: #c49950;
+}
+
 
  #navbar .chapter .subchaptitle {
     /*the chapter title*/
@@ -215,9 +219,17 @@
      text-align: left;
 }
 
+ #navbar .chapter a:hover .subchaptitle {
+    background-color: #c6b184;
+ }
+
  #navbar .chaptitle[disabled="disabled"] {
      color: #ae8847;
      margin-bottom: 0px;
+}
+
+ #navbar .chaptitle[disabled="disabled"]:hover {
+     background-color: #DAAA59;
 }
 
 
@@ -308,7 +320,7 @@
      left: 0;
      transition: 0.25s; /* same as duration of .is_stuck animate in main.js file */
 
-     background-color: #a6acb0;
+     background-color: #cbc1ad;
 
      
 }
@@ -316,7 +328,7 @@
      left: 300px;
 
      background-color: #E2D6C0;
-     box-shadow: 0px 3px 0px #ae8847;
+     box-shadow: 0px 3px 0px #b5ab9a;
 
 }
 
@@ -324,7 +336,7 @@
      text-align: center;
      width: 25px;
      height: 3px;
-     background-color: #3a2620 ;
+     background-color: #2d2b26 ;
      margin: 6px auto;
      transition: 0.7s;
 }
@@ -367,12 +379,12 @@
      margin-bottom: 5px;
      width: 100%;     
 
-     color: #3a2620;
-     background-color: #a6acb0;
+     color: #2d2b26;
+     background-color: #cbc1ad;
 
-     box-shadow: 0px 3px 0px #7a8288;
+     box-shadow: 0px 3px 0px #b5ab9a;
 
-     text-shadow: 0px 1px #7a8288;
+     text-shadow: 0px 1px #b5ab9a;
 
 
      /*border-radius: 5px;*/
