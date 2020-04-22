@@ -64,7 +64,7 @@
     /*padding-top: 10px;
      to make the top element unstick */
      margin-left: 300px;
-     transition: all .25s;
+     transition: all .25s; /* same as duration of .is_stuck animate in main.js file */
     /*to make transition smooth when navbar opens/closes*/
     /*height: 100%;
     */
@@ -292,9 +292,7 @@
      left: 340px;
      z-index: 2;
     */
-     background-color: #E2D6C0;
-     box-shadow: 0px 3px 0px #ae8847;
-
+     
      border: none;
      /*color: #212121;*/
      text-align: center;
@@ -307,23 +305,39 @@
      position: fixed;
      top: 0;
      left: 0;
-     transition: 0.25s;
+     transition: 0.25s; /* same as duration of .is_stuck animate in main.js file */
+
+     background-color: #979ea3;
+
+     
 }
  .navbarcollapsebutton.change {
      left: 300px;
+
+     background-color: #E2D6C0;
+     box-shadow: 0px 3px 0px #ae8847;
+
 }
 
- .menuicon {
-     margin: 0 auto;
-}
  .bar1, .bar2, .bar3 {
      text-align: center;
      width: 25px;
      height: 3px;
-     background-color: #ae8847;
+     background-color: #3a2620 ;
      margin: 6px auto;
      transition: 0.7s;
 }
+
+ .navbarcollapsebutton.change .bar1, .navbarcollapsebutton.change .bar2, .navbarcollapsebutton.change .bar3 {
+     background-color: #ae8847;
+
+}
+
+
+ .menuicon {
+     margin: 0 auto;
+}
+
 .change .bar1 {
      -webkit-transform: rotate(-45deg) translate(-5px, 7px);
      transform: rotate(-30deg) translate(-5px, 1px);

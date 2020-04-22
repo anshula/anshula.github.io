@@ -149,7 +149,7 @@ $(document).ready(function() {
         }
         $(".is_stuck").animate({
             width: new_width
-        }, duration=250) /* same as duration of #navbarcontainer in css file */
+        }, duration=200) /* just a little bit faster than duration of #navbarcontainer in css file */
 
         // bind once!
         $("#content").one("transitionend", function(){
