@@ -59,12 +59,15 @@ $(document).ready(function() {
 
         if(comictitles[index].newsubchapter) {
             var a = "<a href='#/"
-            var b = "'><div class='subchaptitle'>"
-            var c = "</div></a>"
-
-            $(".chapter").eq(chapter_index).append(a + (index+1) + b + comictitles[index].newsubchapter + c);
+            var b = "'><div class='subchaptitle "
+            var c = "'>► "
+            var d = "</div></a>"
 
             current_subchapter = comictitles[index].newsubchapter.replace(/\s/g, '') // remove spaces from title
+
+            $(".chapter").eq(chapter_index).append(a + (index+1) + b + current_subchapter + c + comictitles[index].newsubchapter + d);
+
+            
         }
 
         var a = "<a href='#/"

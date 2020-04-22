@@ -39,11 +39,22 @@ function locationHashChanged() {
     $(".chapter a[href='"+location.hash+"'] .section").attr("id", "selected");
 
     // hide the other subsections
-    $(".section").hide() // hide all of the links
-    var current_subsection = $("#selected").attr("class").split(' ')[1]  // then reshow all the links in the correct subsection
-    $("."+current_subsection).show()
-    $(".subchaptitle").hide() // hide all of the subchaptertitles
-    $("#selected").parent().parent().children().children(".subchaptitle").show() // then reshow all the subchapter titles in the current chapter
+    $(".section").hide(); // hide all of the links
+    var current_subsection = $("#selected").attr("class").split(' ')[1];  // then reshow all the links in the correct subsection
+    $("."+current_subsection).show();
+    $(".subchaptitle").hide(); // hide all of the subchaptertitles
+    $("#selected").parent().parent().children().children(".subchaptitle").show(); // then reshow all the subchapter titles in the current chapter
+    
+    //change down arrows
+    //make all current down arrows side arrows
+    $(".chaptitle:contains(▼)").each( function(index) {$(this).text("► "+$(this).text().slice(2))});
+    $(".subchaptitle:contains(▼)").each( function(index) {$(this).text("► "+$(this).text().slice(2))});
+    // make correct chapter title down
+    var old_text = $("#selected").parent().parent().children(".chaptitle").text();
+    $("#selected").parent().parent().children(".chaptitle").text("▼ "+old_text.slice(2)); // change correct to down
+    // make correct subchapter title down
+    old_text = $("#selected").parent().parent().children().children(".subchaptitle"+ "."+current_subsection).text();
+    $("#selected").parent().parent().children().children(".subchaptitle"+ "."+current_subsection).text("▼ "+ old_text.slice(2)); // change correct to down
 
     // scroll to that part in the table of contents sidebar
     $("#scrollable").animate({
