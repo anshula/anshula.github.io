@@ -136,11 +136,11 @@ function locationHashChanged() {
     }
 
     // if on mobile and the haschange was triggered by clicking on menu bar
-    if(fromMobileNavbarClick) {
-        $(".navbarcollapsebutton").trigger("click");
-        fromMobileNavbarClick = false;
-        // alert('triggered')
-    }
+    // if(fromMobileNavbarClick) {
+    //     $(".navbarcollapsebutton").trigger("click");
+    //     fromMobileNavbarClick = false;
+    //     // alert('triggered')
+    // }
 
     // else {
     //     alert('not triggered')
