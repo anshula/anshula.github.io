@@ -107,7 +107,7 @@
  #navbar {
      display: block;
      height: 100%;
-     background-color: #cd9989;
+     background-color: #E2D6C0;
     /* position: -webkit-sticky;
      position: sticky;
      left: 0;
@@ -149,7 +149,7 @@
 }
  #navbar a:hover .section,  #navbar a .section#selected{
      color: #3a2620;
-     background-color: #e0bfb5;
+     background-color: #979ea3;
 }
 
  #navbar .title {
@@ -167,16 +167,16 @@
 }
 
 #navbar a .author, #navbar .title a {
-    color: #3a2620;
+    color: #41331b;
 }
 
  #navbar a:hover .author {
-    color: #86594b;
+    color: #c49950;
 }
 
 
  #navbar .title a:hover {
-    color: #86594b;
+    color: #c49950;
 }
 
  #navbar .chapter {
@@ -236,9 +236,10 @@
     margin: 0 auto;
 
     
+    background-color: #e5c48b;
+    color: #574424;
 
-    background-color: #9a6656;
-    color: #ecd9d3;
+    
 
 
     text-align: center;
@@ -269,8 +270,8 @@
 }
 
  #navbar a#jumpto:hover {
-    background-color: #e0bfb5;
-    color: #212121;
+    background-color: #c49950;
+    color: #ecd9d3;
  }
 
  #navbar a#pdf:hover {
@@ -289,7 +290,7 @@
      left: 340px;
      z-index: 2;
     */
-     background-color: #e0bfb5;
+     background-color: #979ea3;
      border: none;
      /*color: #212121;*/
      text-align: center;
@@ -315,7 +316,7 @@
      text-align: center;
      width: 25px;
      height: 3px;
-     background-color: #cd9989;
+     background-color: #7a8288;
      margin: 6px auto;
      transition: 0.7s;
 }
@@ -348,11 +349,11 @@
      width: 100%;     
 
      color: #3a2620;
-     background-color: #e0bfb5;
+     background-color: #979ea3;
 
-     box-shadow: 0px 3px 0px #cd9989;
+     box-shadow: 0px 3px 0px #7a8288;
 
-     text-shadow: 0px 1px #cd9989;
+     text-shadow: 0px 1px #7a8288;
 
 
      /*border-radius: 5px;*/
