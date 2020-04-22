@@ -42,6 +42,8 @@ function locationHashChanged() {
     $(".section").hide() // hide all of the links
     var current_subsection = $("#selected").attr("class").split(' ')[1]  // then reshow all the links in the correct subsection
     $("."+current_subsection).show()
+    $(".subchaptitle").hide() // hide all of the subchaptertitles
+    $("#selected").parent().parent().children().children(".subchaptitle").show() // then reshow all the subchapter titles in the current chapter
 
     // scroll to that part in the table of contents sidebar
     $("#scrollable").animate({
