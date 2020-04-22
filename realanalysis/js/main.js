@@ -169,6 +169,9 @@ $(document).ready(function() {
     if(isMobile) {
         //hide navbar
         $(".navbarcollapsebutton").trigger("click");
+
+        //full width for mobile
+        $("#images").width("100%")
     }
 
     /*-------------------------------------------------------*/

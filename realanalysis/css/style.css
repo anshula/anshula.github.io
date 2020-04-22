@@ -432,13 +432,14 @@
      overflow-x: hidden;
 }*/
 
-/*#images {
-    margin-top: 50px;
-}*/
+#images {
+    width: 700px;
+    margin: 0 auto;
+}
 
  #images img {
      display: block;
-     width: 700px;
+     /*width: 700px;*/
     /*height: 500px;
      width: 500px;
     */
