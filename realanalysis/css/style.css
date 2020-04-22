@@ -191,7 +191,7 @@
      padding-bottom: 5px;
      padding-top: 5px;
      padding-left: 5px;
-     font-size: 20px;
+     font-size: 18px;
      font-weight: bold;
 
      width: 295px; /*if this increases by 10px, subtract 10px from -webkit-scrollbar width*/
