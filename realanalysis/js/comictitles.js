@@ -29,6 +29,12 @@ comictitles = [
     {"title" : "How should we order fields?"},
     {"title" : "Is the complex field an ordered field?"},
     {"title" : "What's so special about the reals?", "newsubchapter": "The Real Number Field"},
-    {"title" : "How do we construct the real numbers?"}
+    {"title" : "How do we construct the real numbers?"},
+    {"title" : "Are irrationals a subset of the reals?"},
+    {"title" : "Are there infinitesimally small elements in the real line?"},
+    {"title" : "How can we raise a number to a negative power?"},
+    {"title" : "What happens when we put a bunch of real lines together?"},
+    {"title" : "What happens to the reals when we allow dividing by zero?"},
+    {"title" : "Conclusion",  "newsubchapter": "Conclusion"}
 
 ];
