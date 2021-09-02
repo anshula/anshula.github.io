@@ -35,6 +35,20 @@ comictitles = [
     {"title" : "What happens when we put a bunch of real lines together?"},
     {"title" : "What happens to the reals when we allow dividing by zero?"},
     {"title" : "What's so special about the reals?"},
-    {"title" : "Conclusion",  "newsubchapter": "Conclusion"}
+    {"title" : "Brainteaser",  "newsubchapter": "Brainteasers on Number Systems"},
+
+    {"title" : "What do infinities have to do with calculus?", "newchapter": "true", "newsubchapter": "Comparing Infinities"}, 
+    {"title" : "How do you compare infinities?"},
+    {"title" : "Which set is bigger: the integers or even integers?"},
+    {"title" : "Isn't comparing infinities ridiculous?"},
+    {"title" : "Which set is bigger: (0,1) or (0,2)"},
+    {"title" : "But is that the only way to measure infinities?"},
+    {"title" : "Which set is bigger, the rationals or the irrationals?", "newsubchapter": "Countability"},
+    {"title" : "Are the rationals countable?"},
+    {"title" : "Are the irrationals uncountable?"},
+    {"title" : "Are there more types of infinity?"},
+    {"title" : "Brainteaser", "newsubchapter": "Brainteasers on Infinity"},
+    {"title" : "Super-hard Brainteaser"},
+
 
 ];
