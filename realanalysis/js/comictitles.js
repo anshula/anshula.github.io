@@ -35,7 +35,7 @@ comictitles = [
     {"title" : "What happens when we put a bunch of real lines together?"},
     {"title" : "What happens to the reals when we allow dividing by zero?"},
     {"title" : "What's so special about the reals?"},
-    {"title" : "Brainteaser",  "newsubchapter": "Brainteasers on Number Systems"},
+    {"title" : "Brainteasers",  "newsubchapter": "Brainteasers on Number Systems"},
 
     {"title" : "What do infinities have to do with calculus?", "newchapter": "true", "newsubchapter": "Comparing Infinities"}, 
     {"title" : "How do you compare infinities?"},
