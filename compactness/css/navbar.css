@@ -174,12 +174,10 @@
 /* adjust webkit scrollbar on menu */
 #navbar ::-webkit-scrollbar {
   -webkit-appearance: none;
-  background-color: #000 ;
   width: 0px; /*if this increases by 10px, subtract 10px from .chaptitle width*/
 }
 #navbar ::-webkit-scrollbar-thumb {
   border-radius: 0px;
-  background-color: #DCC593;
 }
 
 
