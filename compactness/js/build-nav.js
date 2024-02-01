@@ -6,7 +6,7 @@ function buildNav() {
     addNavBarOpener()
     populateNavBar()
     activateMenuButton()
-    $(".navbarcollapsebutton").click()
+    // $(".navbarcollapsebutton").click()
 }
 
 /*-------------------------------------------------------*/
