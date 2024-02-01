@@ -1,0 +1,13 @@
+html{
+/*    background-color: #faf7f5 /* pretty much white */*/
+	background-color: #ffffff;
+
+}
+
+a {
+	text-align: left;
+}
+
+figcaption {
+	visibility:  hidden; /*don't show image captions*/
+}

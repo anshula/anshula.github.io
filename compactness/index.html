@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8">
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
+<title>Compactness</title>
+</meta></head>
+<body>
+<h1>Compactness</h1>
+<p></p>
+<link href="css/custom-style.css" rel="stylesheet" type="text/css"/>
+<link href="css/navbar.css" rel="stylesheet" type="text/css"/>
+<link href="css/navbar-colors.css" rel="stylesheet" type="text/css"/>
+<p></p>
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({extensions: ["tex2jax.js","TeX/AMSsymbols.js"],tex2jax:{inlineMath:[['$','$']]}});</script><script async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=default"></script>
+<p></p>
+<script>function setEqualWidthForTds(t){var e=document.getElementsByTagName("tr");for(let t=0;t<e.length;t++){var a=e[t];if(a){var n=100/a.getElementsByTagName("td").length,l=a.getElementsByTagName("td");for(let t=0;t<l.length;t++)l[t].style.width=n+"%"}}}</script>
+<p></p>
+<script crossorigin="anonymous" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="js/build-nav.js"></script>
+<p></p>
+<script>window.onload=function(){setEqualWidthForTds("targetRow");
+	buildNav();}</script>
+<h2>Pancakes, anyone?</h2>
+<p>Open sets are not pancakes.</p>
+<figure><img alt="" src="img/0.png" width="100%"/></figure>
+<p>There are many reasons open sets are not pancakes. One is that pancakes are yummy. </p>
+<table>
+<tbody>
+<tr>
+<td>
+				But it’s helpful to imagine covering someone with pancakes…
+			</td>
+<td>
+				…when what you’re actually doing is covering a space with open sets. 
+			</td>
+</tr>
+<tr>
+<td>
+<img alt="" height="250" src="img/1.png"/>
+</td>
+<td>
+<img alt="" height="250" src="img/2.png"/>
+</td>
+</tr>
+</tbody>
+</table>
+<p>So, in this chapter, I conflate “pancakes” and “open sets.” </p>
+<p> When you see a reference to “pancakes”, feel free to mentally cross it out and replace it with “open sets,” and vice versa, depending on your preference. </p>
+<p>(Thank you, Francis Su’s real analysis lectures, for the pancake analogy!)</p>
+<h2> How many ways can you cover someone with pancakes?</h2>
+<p>Given a particular friend…</p>
+<figure><img alt="" src="img/3.png" width="33%"/></figure>
+<p>…there are lots of ways to completely cover them with pancakes.</p>
+<table>
+<tbody>
+<tr>
+<td style="text-align: left;">
+<img alt="" src="img/4.png"/>
+</td>
+<td style="text-align: left;">
+<img alt="" src="img/5.png"/>
+</td>
+<td style="text-align: left;">
+<img alt="" src="img/6.png"/>
+</td>
+<td style="text-align: left;">
+<img alt="" src="img/7.png"/>
+</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<p>Similarly, given a set in space…</p>
+<figure><img alt="" src="img/8.png" width="33%"/></figure>
+<p>…there are a lot of ways to completely cover it with open sets. For example, a cover of $(0,1)$ could be….</p>
+<table>
+<tbody>
+<tr>
+<td style="text-align: left;">
+<img alt="Just one pancake." src="img/9.png"/>
+</td>
+<td style="text-align: left;">
+<img alt="One bigger pancake." src="img/10.png"/>
+</td>
+<td style="text-align: left;">
+<img alt="Two overlapping pancakes." src="img/11.png"/>
+</td>
+<td style="text-align: left;">
+<img alt="Infinitely many overlapping pancakes." src="img/12.png"/>
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<em>The set $(0,1)$.<br/></em><br/><br/>
+</td>
+<td style="text-align: left;">
+<em>The set $(-1,2)$.<br/></em><br/><br/>
+</td>
+<td style="text-align: left;">
+<em>The sets $(-1,\frac{3}{4})$ and $(\frac{1}{4},2)$.<br/></em><br/>
+</td>
+<td style="text-align: left;">
+<em>The infinite collection of sets $\{(\frac{1}{n},1): n \in \mathbb{N}\}$.</em>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>So, what exactly is a cover?</h2>
+<table>
+<tbody>
+<tr>
+<td style="text-align: left;">
+				Let’s say a “cover” of your friend …
+			</td>
+<td style="text-align: left;">
+				…is a collection of pancakes…
+			</td>
+<td style="text-align: left;">
+				 …that covers every inch of them.
+			</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<img alt="" height="200" src="img/13.png"/>
+</td>
+<td style="text-align: left;">
+<img alt="" height="200" src="img/14.png"/>
+</td>
+<td style="text-align: left;">
+<img alt="" height="200" src="img/15.png"/>
+</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<table>
+<tbody>
+<tr>
+<td style="text-align: left;">
+				And let’s say a “<strong>cover</strong>” of a set $S$…
+			</td>
+<td style="text-align: left;">
+				…is a collection of open sets…
+			</td>
+<td style="text-align: left;">
+				 …that completely contains $S$.
+			</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<img alt="" height="200" src="img/16.png"/>
+</td>
+<td style="text-align: left;">
+<img alt="" height="200" src="img/17.png"/>
+</td>
+<td style="text-align: left;">
+<img alt="" height="200" src="img/18.png"/>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Formally, a $\textit{cover}$ of $S$ is a collection $\mathcal{C}$ of open sets $U$ such that:</p>
+<p>$$ S \subseteq \bigcup\limits_{U \in \mathcal{C}} U.$$</p>
+<p>In other words, a cover $\mathcal{C}$ of the set $S$ is a collection of open sets $U$ (pancakes) such that if you take the union of all the open sets in the collection $\mathcal{C}$, it contains the set $S$.</p>
+<h2>How many pancakes did we use?</h2>
+<p></p>
+<p>Pancakes don’t grow on trees. </p>
+<figure><img alt="" src="img/19.png" width="33%"/></figure>
+<p>So ideally, we only use a finite number of pancakes. </p>
+<table>
+<tbody>
+<tr>
+<td style="text-align: left;">
+<img alt="" src="img/20.png"/>
+</td>
+<td style="text-align: left;">
+<img alt="" src="img/21.png"/>
+</td>
+<td style="text-align: left;">
+<img alt="" src="img/22.png"/>
+</td>
+<td style="text-align: left;">
+<img alt="" src="img/23.png"/>
+</td>
+</tr>
+</tbody>
+</table>
+<figure><img alt="" src="img/24.jpg" width="74%"/><img alt="" src="img/25.jpg" width="25%"/></figure>
+<table>
+<tbody>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+				Note that some covers use finitely many pancakes.
+			</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+				And some covers use infinitely many.
+			</td>
+</tr>
+</tbody>
+</table>
+<figure><img alt="" src="img/26.jpg" width="74%"/><img alt="" src="img/27.jpg" width="25%"/></figure>
+<table>
+<tbody>
+<tr>
+<td style="text-align: left;">
+<img alt="" src="img/28.png"/>
+</td>
+<td style="text-align: left;">
+<img alt="" src="img/29.png"/>
+</td>
+<td style="text-align: left;">
+<img alt="" src="img/30.png"/>
+</td>
+<td style="text-align: left;">
+<img alt="" src="img/31.png"/>
+</td>
+</tr>
+</tbody>
+</table>
+<p>So, when I say a cover is <em>finite</em>, I mean the cover uses <em>finitely</em> many pancakes.</p>
+<p>Formally, when I say that $\mathcal{C}$ is a <strong>finite cover</strong>, I mean that there are only finitely many open sets in $\mathcal{C}$. Of course, each of these open sets could contain infinitely many points.</p>
+<p></p>
+<h2> Did you need all of those pancakes?</h2>
+<p>Sometimes, we used more pancakes than we needed to completely cover a person.</p>
+<p>So once you have a cover…</p>
+<figure><img alt="" src="img/32.png" width="50%"/></figure>
+<p>…you might want to eat the pancakes you didn’t need. A subcover is any  subcollection of those pancakes that still covers your friend.</p>
+<figure><img alt="" src="img/33.png" width="50%"/></figure>
+<table>
+<tbody>
+<tr>
+<td>
+				If it doesn’t completely cover your friend, it isn’t a subcover.<br/><br/>
+</td>
+<td>
+				And if it requires adding new pancakes that weren’t in the original cover, it isn’t a subcover either.
+			</td>
+</tr>
+<tr>
+<td>
+<img alt="" src="img/34.png"/>
+</td>
+<td>
+<img alt="" src="img/35.png" width="964"/>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Informally, a subcover is a cover …</p>
+<figure><img alt="" src="img/36.jpg" width="66%"/></figure>
+<p>…. after you’ve eaten some of the pancakes in it.</p>
+<figure><img alt="" src="img/37.jpg" width="66%"/></figure>
+<p>Formally, a <strong>subcover</strong> is a subcollection of a cover, that is still a cover.</p>
+<p>So if you consider this particular cover…</p>
+<figure><img alt="" src="img/38.png" width="50%"/></figure>
+<table>
+<tbody>
+<tr>
+<td>
+				…this is a subcover of it.
+			</td>
+<td>
+				…this is not.
+			</td>
+</tr>
+<tr>
+<td>
+<img alt="" height="230" src="img/39.png"/>
+</td>
+<td>
+<img alt="" height="230" src="img/40.png"/>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>How many pancakes can we remove?</h2>
+<table>
+<tbody>
+<tr>
+<td>
+				Sometimes, you’ll start with an infinite cover…<br/>
+</td>
+<td>
+				…and be able to remove enough pancakes to end up with a finite subcover.
+			</td>
+</tr>
+<tr>
+<td>
+<img alt="" src="img/41.jpg"/>
+</td>
+<td>
+<img alt="" src="img/42.png"/>
+</td>
+</tr>
+</tbody>
+</table>
+<p>But other times, you won’t be able to. </p>
+<p>For example, we suppose we want to cover the set $(-1,1)$…</p>
+<figure><img alt="" src="img/43.jpg" width="66%"/></figure>
+<p> with the following collection…</p>
+<p>$$\left\{\left(-\frac{1}{2},\frac{1}{2}\right), \left(-\frac{3}{4},\frac{3}{4}\right), \left(-\frac{4}{5},\frac{4}{5}\right), \cdots \right\}$$</p>
+<figure><img alt="" src="img/44.png" width="66%"/></figure>
+<p>…which we can write succinctly as…</p>
+<p>$$\left\{ \left(-\frac{n}{n+1},\frac{n}{n+1} \right) : n \in \mathbb{N}\right\}.$$</p>
+<p></p>
+<p>There is no way you can take away so many pancakes that you leave a finite number of pancakes there, and it still covers the set $(-1, 1)$. </p>
+<figure><img alt="" src="img/45.png" width="66%"/></figure>
+<p> Informally, this is because when you take any finite subset of the cover, you end up exposing a bit of edge of the set. You’ll prove it formally in the puzzle at the end of this section!</p>
+<h2>How do we know which covers have spare pancakes?</h2>
+<p>Ok fine, so we know that when you look at covering $(-1,1)$…</p>
+<table>
+<tbody>
+<tr>
+<td>
+				There are some covers …
+			</td>
+<td>
+				…that have finite subcovers.
+			</td>
+</tr>
+<tr>
+<td>
+<img alt="" height="270" src="img/46.jpg"/>
+</td>
+<td>
+<img alt="" height="270" src="img/47.jpg"/>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>
+				And there are other covers ….
+			</td>
+<td>
+				that have no finite subcover.
+			</td>
+</tr>
+<tr>
+<td>
+<img alt="" height="270" src="img/48.jpg"/>
+</td>
+<td>
+<img alt="" height="270" src="img/49.jpg"/>
+</td>
+</tr>
+</tbody>
+</table>
+<p>So what?</p>
+<p>Here’s the big thing: there are some sets, which, given any cover of them, always reduce to a finite subcover. In those sets, any infinite cover will always have spare pancakes to munch on.</p>
+<p>For example, look at $[-1,1]$.</p>
+<figure><img alt="" src="img/50.jpg" width="66%"/></figure>
+<table>
+<tbody>
+<tr>
+<td>
+				You can cover it like this…
+			</td>
+<td>
+				…and get a finite subcover.
+			</td>
+</tr>
+<tr>
+<td>
+<img alt="" height="270" src="img/51.jpg"/>
+</td>
+<td>
+<img alt="" height="270" src="img/52.jpg"/>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>
+				And you can cover it like this…
+			</td>
+<td>
+				…and get a finite subcover.
+			</td>
+</tr>
+<tr>
+<td>
+<img alt="" height="270" src="img/53.jpg"/>
+</td>
+<td>
+<img alt="" height="270" src="img/54.jpg"/>
+</td>
+</tr>
+</tbody>
+</table>
+<p>And in fact, it turns out, no matter how you cover it, you can reduce that to a finite subcover.</p>
+<p>So what’s so great about this set?</p>
+<figure><img alt="" src="img/55.jpg" width="66%"/></figure>
+<p>It’s so low-maintenance! </p>
+<table>
+<tbody>
+<tr>
+<td>
+				Given an infinite amount of information about the set’s cover…
+			</td>
+<td>
+				…you can always just reduce that…<br/><br/>
+</td>
+<td>
+				…to a finite amount of information.<br/><br/>
+</td>
+</tr>
+<tr>
+<td>
+<img alt="" src="img/56.png"/>
+</td>
+<td>
+<img alt="" src="img/57.png"/>
+</td>
+<td>
+<img alt="" src="img/58.png"/>
+</td>
+</tr>
+</tbody>
+</table>
+<p> So, let’s call any set like this a “compact set” as a thank-you to the conciseness of the information needed to describe any cover of the set.</p>
+<p>Formally, let’s say a set is <strong>compact</strong> when every single cover of it (no matter how big) has a finite subcover.</p>
+<table>
+<tbody>
+<tr>
+<td>
+				So the set $[-1,1]$ <em> is compact</em>. <br/><br/>
+</td>
+<td>
+				 Because (we’ll prove later) every cover of it has a finite subcover. <br/>
+</td>
+</tr>
+<tr>
+<td>
+<img alt="" src="img/59.jpg"/>
+</td>
+<td>
+<img alt="" src="img/60.jpg"/>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>
+				But the set $(-1,1)$ is <em>not </em>compact. <br/><br/>
+</td>
+<td>
+				Because there is a cover of it with no finite subcover.
+			</td>
+</tr>
+<tr>
+<td>
+<img alt="" src="img/61.jpg"/>
+</td>
+<td>
+<img alt="" src="img/62.jpg"/>
+</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<h2>What’s the point of compact sets?</h2>
+<p></p>
+<p></p>
+<p>“Compactness is the next best thing to finiteness,” says Prof. Francis Su. </p>
+<p>It’s true. That is, a compact set may not be finite, but it’s the “next best thing” — any open cover of it can be reduced to a finite one.</p>
+<p>This ability to reduce a lot of information to just a finite amount means compact sets are much easier to prove things about than other sets. </p>
+<p>As a result, compact sets play a big role in differentiation and integration, as we’ll see later.</p>
+<h2>Puzzle</h2>
+<table>
+<tbody>
+<tr>
+<td>
+				We know $\left\{ \left(-\frac{n}{n+1},\frac{n}{n+1} \right) : n \in \mathbb{N}\right\}$ covers $(-1,1)$.
+			</td>
+<td>
+				Prove that no finite subset of it covers $(-1,1)$. <br/>
+</td>
+</tr>
+<tr>
+<td>
+<img alt="" src="img/63.jpg"/>
+</td>
+<td>
+<img alt="" src="img/64.jpg"/>
+</td>
+</tr>
+</tbody>
+</table>
+<h6>Scroll if you'd like a hint...</h6>
+<figure><img alt="" src="img/65.jpg" width="33%"/></figure>
+<p>If you had a finite subcover $\mathcal{F}$, then it has a “largest pancake.” That is, there is a largest value of $n$ such that the pancake $\left( -\frac{n}{n+1},\frac{n}{n+1} \right)$ is in $\mathcal{F}$. </p>
+<h6>Scroll if you'd like a hint...</h6>
+<figure><img alt="" src="img/66.jpg" width="33%"/></figure>
+<p> Suppose the largest pancake in $\mathcal{F}$ is $\left( -\frac{N}{N+1},\frac{N}{N+1} \right)$. </p>
+<p> Then, the interval $\left[\frac{N}{N+1}, 1\right)$ is uncovered…so $\mathcal{F}$ can’t be a cover.</p>
+<p></p>
+</body>
+</html>
