@@ -59,7 +59,10 @@ widget = BeautifulSoup('''
         window.addEventListener("DOMContentLoaded", function() {
             if (typeof NRWebReader != 'undefined') {
                 window['NRWebReader'] = new NRWebReader({
-                widget_id: "prx8ek8e4z"  // DO NOT REMOVE. This is your widget ID for your WebReader
+                  widget_id: "prx8ek8e4z",  // DO NOT REMOVE. This is your widget ID for your WebReader
+                  bar : {
+                    settings_auto_scroll: true,
+                  },
                 });
             }
         }); 
