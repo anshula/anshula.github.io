@@ -52,6 +52,21 @@ for img_tag in soup.findAll("img"):
   # Increment counter for the next image
   counter += 1
 
+# Insert screen reader widget
+widget = BeautifulSoup('''
+    <script src="https://webreader.naturalreaders.com/nr-webreader.js" defer></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            if (typeof NRWebReader != 'undefined') {
+                window['NRWebReader'] = new NRWebReader({
+                widget_id: "prx8ek8e4z"  // DO NOT REMOVE. This is your widget ID for your WebReader
+                });
+            }
+        }); 
+    </script>
+    ''', 'html.parser')
+soup.body.append(widget)
+
 # Save the modified HTML file
 with open("index.html", "w") as html_file:
   html_file.write(str(soup))
