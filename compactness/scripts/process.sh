@@ -14,8 +14,8 @@ counter = 0
 os.makedirs("img", exist_ok=True)
 
 # Find all images in the file
-for link in soup.findAll("img"):
-  old_file_name = link['src']
+for img_tag in soup.findAll("img"):
+  old_file_name = img_tag['src']
   img_extension = os.path.splitext(old_file_name)[-1]
 
   # Construct new file name and path
@@ -31,11 +31,23 @@ for link in soup.findAll("img"):
   if width > 700: image = image.resize((700, int(height/width*700)))
   image.save(new_file_path, subsampling=0, quality = 50)
 
-  # Update the link in the <img> tag
-  link['src'] = new_file_path
+  # Update the img_tag in the <img> tag
+  img_tag['src'] = new_file_path
 
-  # Set a blank alt attribute to decorative images, so screen readers skip over it
-  if not link.has_attr("alt"): link['alt'] = ""
+  # Move the alt text to a figcaption
+  # img_parent = img_tag.parent 
+  # if img_parent and img_parent.name != 'figure':   # if not already wrapped in a figure
+    # fig = soup.new_tag('figure')
+    # img_tag.wrap(fig)
+  img_parent = img_tag.parent 
+  if img_parent and img_parent.name != 'figure':  # if there is not already wrapped in a figure (and therefore has no fig caption)
+    if img_tag.has_attr("alt"):                    # ...and there is an alt text ready...
+      figcaption = soup.new_tag('figcaption')      # make it the figcaption
+      figcaption.string = img_tag['alt']
+      img_tag.insert_after(figcaption)
+
+  # Set a alt text to blank, so screenreaders don't repeat the figcaption (if figcaption is there), and skip over it it's decorative (no ficaption)
+  img_tag['alt'] = ""
 
   # Increment counter for the next image
   counter += 1
@@ -50,6 +62,7 @@ for filename in os.listdir():
       os.remove(filename)
 
 # Clear unused CSS file
+move("css/style.css", target_dir + "css/style.css")
 rmtree("css")
 
 # Remove old index and img folder from compactness folder

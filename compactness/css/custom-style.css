@@ -7,7 +7,3 @@ html{
 a {
 	text-align: left;
 }
-
-figcaption {
-	visibility:  hidden; /*don't show image captions*/
-}
