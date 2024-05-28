@@ -19,3 +19,37 @@ mathcaption {
 	height:0;
 	overflow:hidden;
 }
+
+/*
+@font-face { 
+	font-family: Quicksand;
+	src:
+		 url(../fonts/quicksand-regular.svg#quicksand)  format("svg"),
+		 url(../fonts/quicksand-regular.ttf)  format("truetype"),
+		 url(../fonts/quicksand-regular.woff)  format("woff"),
+		 url(../fonts/quicksand-regular.woff2)  format("woff2");
+	font-weight: regular;
+	font-style: regular;
+}
+
+@font-face { 
+	font-family: Quicksand;
+	src: url(../fonts/quicksand-bold.woff2) format("woff2");
+	font-weight: bold;
+	font-style: regular;
+}
+
+@font-face { 
+	font-family: Quicksand;
+	src: url(../fonts/quicksand-regularitalic.woff2)  format("woff2");
+	font-weight: regular;
+	font-style: italic;
+}
+
+
+@font-face { 
+	font-family: Quicksand;
+	src: url(../fonts/quicksand-bolditalic.woff2)  format("woff2");
+	font-weight: bold;
+	font-style: italic;
+}*/
