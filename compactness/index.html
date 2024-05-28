@@ -37,16 +37,17 @@ MathJax = {
 <p></p>
 <script>function setEqualWidthForTds(t){var e=document.getElementsByTagName("tr");for(let t=0;t<e.length;t++){var a=e[t];if(a){var n=100/a.getElementsByTagName("td").length,l=a.getElementsByTagName("td");for(let t=0;t<l.length;t++)l[t].style.width=n+"%"}}}</script>
 <p></p>
-<script crossorigin="anonymous" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" src="https://code.jquery.com/jquery-2.2.4.js"></script>
-<script src="js/build-nav.js"></script>
+<script defer="" src="https://webreader.naturalreaders.com/nr-webreader.js"></script>
 <script src="js/math-speech.js"></script>
 <p></p>
+<script crossorigin="anonymous" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="js/build-nav.js"></script>
+<p></p>
 <script>window.onload=function(){
-	buildMathSpeech();
 	setEqualWidthForTds("targetRow");
+	buildMathSpeech();
 	buildNav();
 }</script>
-
 <h2>Pancakes, anyone?</h2>
 <p>Open sets are not pancakes.</p>
 <figure><img alt="" src="img/0.png" width="100%"/><figcaption>Consider the open disk containing all x and y coordinates such that x squared plus y squared is less than 1. That open disk, is, unfortunately, not a pancake.</figcaption></figure>
@@ -535,7 +536,5 @@ MathJax = {
 <p> Suppose the largest pancake in $\mathcal{F}$ is $\left( -\frac{N}{N+1},\frac{N}{N+1} \right)$. </p>
 <p> Then, the interval $\left[\frac{N}{N+1}, 1\right)$ is uncovered…so $\mathcal{F}$ can’t be a cover.</p>
 <p></p>
-
-<script defer="" src="https://webreader.naturalreaders.com/nr-webreader.js"></script>
 </body>
 </html>
