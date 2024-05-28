@@ -14,16 +14,43 @@
 <link href="css/navbar.css" rel="stylesheet" type="text/css"/>
 <link href="css/navbar-colors.css" rel="stylesheet" type="text/css"/>
 <p></p>
-<script type="text/x-mathjax-config"> MathJax.Hub.Config({extensions: ["tex2jax.js","TeX/AMSsymbols.js"],tex2jax:{inlineMath:[['$','$']]}});</script><script async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=default"></script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$']]
+  },
+  svg: {
+    fontCache: 'global'
+  },
+  options: {
+    enableMenu: true,          // set to false to disable the menu
+    menuOptions: {
+      settings: {
+        explorer: true,       // this is what generates the math-text-to-speech
+      },
+    }
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
 <p></p>
 <script>function setEqualWidthForTds(t){var e=document.getElementsByTagName("tr");for(let t=0;t<e.length;t++){var a=e[t];if(a){var n=100/a.getElementsByTagName("td").length,l=a.getElementsByTagName("td");for(let t=0;t<l.length;t++)l[t].style.width=n+"%"}}}</script>
 <p></p>
 <script crossorigin="anonymous" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" src="https://code.jquery.com/jquery-2.2.4.js"></script>
 <script src="js/build-nav.js"></script>
+<script src="js/math-speech.js"></script>
 <p></p>
-<script>window.onload=function(){setEqualWidthForTds("targetRow");
-	buildNav();}</script>
+<script>window.onload=function(){
+	buildMathSpeech();
+	setEqualWidthForTds("targetRow");
+	buildNav();
+
+}</script>
+
 <h2>Pancakes, anyone?</h2>
+
 <p>Open sets are not pancakes.</p>
 <figure><img alt="" src="img/0.png" width="100%"/><figcaption>Consider the open disk containing all x and y coordinates such that x squared plus y squared is less than 1. That open disk, is, unfortunately, not a pancake.</figcaption></figure>
 <p>There are many reasons open sets are not pancakes. One is that pancakes are yummy. </p>
