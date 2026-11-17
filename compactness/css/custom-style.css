@@ -20,36 +20,37 @@ mathcaption {
 	overflow:hidden;
 }
 
-/*
-@font-face { 
-	font-family: Quicksand;
+@font-face {
+	font-family: "Quicksand";
 	src:
-		 url(../fonts/quicksand-regular.svg#quicksand)  format("svg"),
-		 url(../fonts/quicksand-regular.ttf)  format("truetype"),
-		 url(../fonts/quicksand-regular.woff)  format("woff"),
-		 url(../fonts/quicksand-regular.woff2)  format("woff2");
-	font-weight: regular;
-	font-style: regular;
+		url("../fonts/quicksand-regular.woff2") format("woff2"),
+		url("../fonts/quicksand-regular.woff") format("woff"),
+		url("../fonts/quicksand-regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }
 
-@font-face { 
-	font-family: Quicksand;
-	src: url(../fonts/quicksand-bold.woff2) format("woff2");
-	font-weight: bold;
-	font-style: regular;
+@font-face {
+	font-family: "Quicksand";
+	src: url("../fonts/quicksand-bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
 }
 
-@font-face { 
-	font-family: Quicksand;
-	src: url(../fonts/quicksand-regularitalic.woff2)  format("woff2");
-	font-weight: regular;
+@font-face {
+	font-family: "Quicksand";
+	src: url("../fonts/quicksand-regularitalic.woff2") format("woff2");
+	font-weight: 400;
 	font-style: italic;
+	font-display: swap;
 }
 
-
-@font-face { 
-	font-family: Quicksand;
-	src: url(../fonts/quicksand-bolditalic.woff2)  format("woff2");
-	font-weight: bold;
+@font-face {
+	font-family: "Quicksand";
+	src: url("../fonts/quicksand-bolditalic.woff2") format("woff2");
+	font-weight: 700;
 	font-style: italic;
-}*/
+	font-display: swap;
+}
