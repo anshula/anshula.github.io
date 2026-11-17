@@ -35,12 +35,6 @@ color: #8E7280; /* Mid- Purple */
   right: 0;
   width: 70px; /* Set the width of the gradient */
   height: 100%;
-/*  background-image: linear-gradient(to left,var(--tw-gradient-stops));*/
-  background: linear-gradient(to right, transparent, #1F1319); /* Adjust gradient colors as needed */
-/*  --tw-gradient-from: #1F1319 var(--tw-gradient-from-position);
-  --tw-gradient-to: #1F1319 var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to);*/
-
 }
 
 /* ----------- NAVBAR COLLAPSE BUTTON ----------- */
